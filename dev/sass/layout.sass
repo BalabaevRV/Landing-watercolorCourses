@@ -1,0 +1,113 @@
+.container
+	width: 1200px
+	margin: 0 auto
+	border: 2px solid blue
+
+.container:nth-child(2n) 
+	border-color: purple
+
+.mainNavigation
+	display: flex
+	justify-content: space-between
+
+.hero
+	min-height: 820px
+	display: flex
+	align-items: center
+	margin-bottom: 220px
+
+.hero__text 
+	width: 50%
+
+.hero__button
+	display: block
+	margin-bottom: 170px
+
+.aboutWatercolor
+	display: flex
+	flex-direction: flex-end
+	align-items: center
+	margin-bottom: 380px
+
+
+.aboutWatercolor::before
+	background-image: url("/img/aboutWatercolor.png")
+	background-repeat: no-repeat
+	background-position: center
+	display: block
+	height: 587px
+	width: 547px
+	content: ""
+
+
+.aboutWatercolor__textWrap 
+	width: 50%
+	margin-right: 0
+
+.stereotypes
+	display: flex
+	align-items: center
+
+.stereotypes::before
+	background-image: url("/img/flamingohead.png")
+	background-repeat: no-repeat
+	background-position: center
+	display: block
+	height: 628px
+	width: 291px
+	content: ""
+
+.stereotypes::after
+	background-image: url("/img/flamingo.png")
+	background-repeat: no-repeat
+	background-position: center
+	display: block
+	height: 578px
+	width: 286px
+	content: ""
+
+.stereotypes::after
+
+.stereotypes__textWrap 
+	text-align: center
+
+.stereotypes__textWrap::after
+	background-image: url("/img/stereotypes.png")
+	background-repeat: no-repeat
+	background-position: center
+	display: block
+	height: 175px
+	width: 170px
+	content: ""
+	margin: 0 auto
+
+.advantages
+	background-image: url("/img/backgroundFox.png")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	margin-bottom: 196px
+
+.advantages__wrap
+	max-width: 450px
+	margin-bottom: 130px
+
+.advantages__wrap:nth-child(2)
+	margin-right: 0 
+	margin-left: auto
+
+.advantages__list
+	margin-bottom: 60px
+
+.teachers
+	text-align: center
+	margin-bottom: 200px
+
+.teachers__photoContainer
+	width: 780px
+	margin: 0 auto
+	margin-bottom: 100px
+
+.gallery
+	text-align: center
+	margin-bottom: 150px
