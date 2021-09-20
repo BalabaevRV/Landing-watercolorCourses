@@ -6,11 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Курс по акварельной живописи</title>
+    <link href="/css/layout.css" rel="stylesheet">
+    <link href="/css/reset.css" rel="stylesheet">
 </head>
 <body>
-    <header class="mainNavigation">
+    <header class="mainNavigation container">
+    	<a href="#" class="logo">Art Garden</a>
     	<nav>
-    		<a href="#" class="logo">Art Garden</a>
     		<ul class="mainNavigation__navigation navigationList">
 				<li class="navigationList__item"><a href="#" class="navigationList__link">О нас</a></li>
 				<li class="navigationList__item"><a href="#" class="navigationList__link">Галерея</a></li>
@@ -18,22 +20,24 @@
 				<li class="navigationList__item"><a href="#" class="navigationList__link">Тарифы</a></li>
 				<li class="navigationList__item"><a href="#" class="navigationList__link">Контакты</a></li>
     		</ul>
-    		<adress>г. Санкт-Петербург, конюшная 4</adress>
-    		<a href="tel:+89524568232">тел. 8 (952) 456-82-32</a>
     	</nav>	
+    	<adress>г. Санкт-Петербург, конюшная 4</adress>
+    	<a href="tel:+89524568232">тел. 8 (952) 456-82-32</a>
     </header>
     <main>
-    	<section class="hero">
+    	<section class="hero container">
     		<div class="hero__text">
 	    		<h1 class="mainTitle">Научим рисовать акварелью</h1>
 	    		<h2 class="subTitle">Раскроем твой творческий потенциал на все 100%</h2>
-	    		<a href="#" class="button">Записаться</a>
-	    		<h3 class="hero__bottomSign">Следующий старт 24 июня 2020</h3>
+	    		<a href="#" class="hero__button button">Записаться</a>
+	    		<h3 class="">Следующий старт 24 июня 2020</h3>
     		</div>
+    		<img src="img/hero.png" alt="Нарисованная акварелью девушка">
     	</section>
     	<section class="aboutWatercolor container">
-    		<h1 class="title">Самая легкая и воздушная</h1>
-    		<article class="text">
+    		<div class="aboutWatercolor__textWrap">
+    			<h1 class="title">Самая легкая и воздушная</h1>
+    			<article class="text">
     			Акварель — это интересный воздушный материал.  С помощью акварели можно создавать удивительно  легкие и в то же время глубоки картины. 
     			<br>	
 				Рисованию акварелью — это волшебный процесс 
@@ -42,28 +46,32 @@
 				<br>	
 				Сделать это вы сможете на нашем курсе!
     		</article>
+    		</div>
     	</section>
     	<section class="stereotypes container">
-    		<ul class="stereotypes__list stereotypesList">
-    			<li class="stereotypesList__item">Акварель — это сложный и непонятный материал</li>
-    			<li class="stereotypesList__item">Чтобы уметь рисовать нужно иметь врожденный талант</li>
-    			<li class="stereotypesList__item">Чтобы уметь рисовать нужно было учиться еще с детства</li>
-    			<li class="stereotypesList__item">Чтобы уметь рисовать нужны годы практики</li>
-    		</ul>
-    		<p class="stereotypes__text text">И это далеко не весь список стереотипов, которые мы разрушаем на наших занятиях</p>	
+    		<div class="stereotypes__textWrap">
+    		<h1 class="title">Ломаем стереотипы</h1>
+	    		<ul class="stereotypes__list stereotypesList">
+	    			<li class="stereotypesList__item">Акварель — это сложный и непонятный материал</li>
+	    			<li class="stereotypesList__item">Чтобы уметь рисовать нужно иметь врожденный талант</li>
+	    			<li class="stereotypesList__item">Чтобы уметь рисовать нужно было учиться еще с детства</li>
+	    			<li class="stereotypesList__item">Чтобы уметь рисовать нужны годы практики</li>
+	    		</ul>
+	    		<p class="stereotypes__text text">И это далеко не весь список стереотипов, которые мы разрушаем на наших занятиях</p>
+    		</div>	
     	</section>
     	<section class="advantages container">
     		<h1 class="title">С нами тебя ждет</h1>
-    		<dl class="">
-    			<div class="advantagesList__wraper">
+    		<dl class="advantages__list">
+    			<div class="advantages__wrap">
 					<dt class="advantagesList__term">Индивидуальный подход</dt>
 					<dd>Наши преподаватели опытные художники, умеющие найти подход к каждому ученику. Нами была разработана уникальная методика, по которой может научиться рисовать любой взрослый человек, даже если он никогда не брал кисть в руки</dd>
     			</div>
-    			<div class="advantagesList__wraper">
+    			<div class="advantages__wrap">
 					<dt class="advantagesList__term">Волшебная атмосфера</dt>
 					<dd>Позитивная и уютная атмосфера способствует лучшему пониманию материала. На занятиях всегда весело и интересно. В доступе кофе, чай и печенюшки. В нашем пространстве царит волшебная атмосфера, в которой люди открывают себя по новой, раскрепощаясь не только в рисунке, но и в общении!</dd>
     			</div>
-    			<div class="advantagesList__wraper">
+    			<div class="advantages__wrap">
 					<dt class="advantagesList__term">Качественные материалы</dt>
 					<dd>Материалы, при рисовании акварелью, имеют большое значение. Порой хорошо подобранная бумага очень сильно влияет на конечный результат. Важно чтобы в составе бумаге содержался хлопок. Мы сразу даем ученикам качественные материалы. Так как это один из элементов успеха</dd>
     			</div>
@@ -76,12 +84,13 @@
 			</ul>
     	</section>
     	<section class="teachers">
+    		<h1 class="title">Наша команда</h1>
     		<div class="teachers__photoContainer">
     			<ul class="teachers__nav teacherSlider__nav">
     				<li class="teacherSlider__arrow"><img src="img/arrow.png" alt="Left click"></li>
     				<li class="teacherSlider__arrow"><img src="img/arrow.png" alt="Right click"></li>
     			</ul>
-    			<figure class="teacherSlider__mainPhoto">
+    			<figure class="teacherSlider__mainPhoto red">
     				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px">
     			</figure>
     			<figcaption class="teachers__sign">Литвинова Анна</figcaption>
@@ -91,11 +100,11 @@
     			<li class="teacherSlider__teacher"><img src="img/teachTroitskaiMaria-min.jpg" alt="Преподаватель — Троицкая Мария"></li>    
 				<li class="teacherSlider__teacher"><img src="img/teachVolkovMihail-min.jpg" alt="Преподаватель — Волков Михаил"></li>
     			<li class="teacherSlider__teacher"><img src="img/teachPavlovAlexander-min.jpg" alt="Преподаватель — Павлов Александр"></li> 	
-				<li class="teacherSlider__teacher"><img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна"></li>
+				<li class="teacherSlider__teacher"><img src="img/teachLitvinovaAnna-min.jpg" alt="Преподаватель — Литвинова Анна"></li>
     			<li class="teacherSlider__teacher"><img src="img/teachMelkinovaIrina-min.jpg" alt="Преподаватель — Мельникова Ирина"></li> 	    					
     		</ul>
     	</section>
-    	<section class="">
+    	<section class="gallery">
     		<h1 class="title">Работы учеников</h1>
     		<ul class="pictureCarousel">
     			<li class="pictureCarousel_item"><img src="img/imgSlide1.jpg" alt="Картина 1"></li>	
