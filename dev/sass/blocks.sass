@@ -1,0 +1,507 @@
+@import settings
+
+@font-face 
+	font-family: "laptevBrush"
+	src: local("Laptev Brush"), url("/fonts/Laptev_Brush.woff") format("woff")
+
+.logo
+	display: block
+	background-image: url("/img/logo.png")
+	background-position: center
+	width: 155px
+	height: 107px
+
+.mainNavigation
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative	
+
+.navigationList
+	display: flex
+	align-items: center
+	@media screen and (max-width: $xlSize)
+		display: none	
+
+.navigationList__item
+	margin-right: 20px		
+
+.navigationList__link
+	color: $black
+	text-decoration: none
+
+.mainTitle
+	font-family: $laptev
+	font-size: 96px
+	text-shadow: -1px 0 0
+	font-weight: lighter
+	@media screen and (max-width: $sSize)
+		font-size: 80px
+
+.subTitle
+	font-family: GilroyBold, sans-serif
+	font-size: 28px
+
+.button
+	background: none
+	background-image: url("/img/button.png")
+	font-family: $laptev	
+	font-size: 30px
+	text-shadow: 0.5px 0 0
+	letter-spacing: 2px
+	color: $white
+	width: 224px
+	height: 69px
+	text-align: center
+	padding-top: 18px
+	cursor: pointer
+
+.button--big
+	background-image: url("/img/buttonGallery.png")	
+	width: 297px
+	height: 90px
+	padding-top: 5px
+
+.button--form
+	width: 297px
+
+.button--noPadding 
+	padding-top: 0	
+
+.title
+	background-repeat: no-repeat
+	font-family: $laptev
+	font-size: $title	
+	font-weight: lighter
+	color: $white
+	@media screen and (max-width: $xlSize)
+		font-size: $titleSmall
+		background-size: contain
+
+.title--black
+	color: $black
+
+.title--purple 
+	background-image: url("/img/bgTitlePurple.png")
+	height: 96px
+	padding-top: 15px
+	padding-left: 20px	
+
+.title--pink 
+	background-image: url("/img/bgTitlePink.png")
+	background-position: center
+	height: 164px
+	padding-top: 60px
+
+.title--orange
+	background-image: url("/img/bgTitleorange.png")
+	height: 138px
+	padding-top: 40px
+	padding-left: 40px	
+
+.title--blue
+	background-image: url("/img/bgTitleBlue.png")
+	background-position: center
+	height: 99px
+	padding-top: 10px
+	padding-left: 10px
+
+.title--darkPurple
+	background-image: url("/img/bgTitleDarkPurple.png")
+	background-position: center
+	height: 99px
+	padding-top: 25px
+	padding-left: 10px
+
+.title--darkPing
+	background-image: url("/img/bgTitleDarkPink.png")
+	background-position: center
+	height: 99px
+	padding-top: 10px
+	padding-left: 10px	
+
+.stereotypesList
+	display: grid
+	flex-direction: column
+	align-items: center
+	@media screen and (max-width: $lSize)
+		margin: 0 auto
+		width: 320px
+
+
+.stereotypesList__item 
+	margin-bottom: 10px	
+	position: relative
+
+.stereotypesList__item::before
+	background-image: url("/img/line.png")
+	background-repeat: no-repeat
+	background-position: left
+	background-size: cover
+	height: 2px
+	display: block
+	position: absolute
+	width: 110%
+	left: -5%
+	top: 10px
+	content: ""
+
+.stereotypesList__item::after
+	@media screen and (max-width: $lSize)
+		background-image: url("/img/line.png")
+		background-repeat: no-repeat
+		background-position: left
+		background-size: cover
+		height: 2px
+		display: block
+		position: absolute
+		width: 70%
+		left: 0 
+		right: 0
+		margin: 0 auto
+		top: 32px
+		content: ""	
+
+
+
+.advantagesList__term
+	font-family: $laptev
+	font-size: $secondTitle	
+	font-weight: lighter
+	margin-bottom: 10px
+
+
+.advantagesList
+	display: grid
+	text-align: center
+	grid-template-rows: 1fr
+	grid-template-columns: 1fr 1fr 1fr 1fr
+	@media screen and (max-width: $xlSize)
+		grid-template-rows: 1fr 1fr
+		grid-template-columns: 1fr 1fr
+		justify-items: center
+	@media screen and (max-width: $sSize)	
+		grid-template-rows: 1fr 1fr 1fr 1fr 
+		grid-template-columns: 1fr 
+		justify-items: center
+
+.advantagesList__item
+	width: 260px
+	// @media screen and (max-width: $xlSize)
+	// 	width: 50%
+
+.advantagesList__item:nth-child(-n+2)
+	@media screen and (max-width: $xlSize)	
+		margin-bottom: 80px
+
+
+.advantagesList__item::before
+	content: ""
+	display: block
+	background-position: bottom
+	background-repeat: no-repeat
+	margin: auto
+	margin-bottom: 30px
+
+.advantagesList__item--time::before
+	background-image: url("/img/advantagesTime.png")	
+	width: 98px
+	height: 97px
+
+.advantagesList__item--practice::before
+	background-image: url("/img/advantagesPractice.png")	
+	width: 122px
+	height: 101px
+
+.advantagesList__item--communication::before
+	background-image: url("/img/advantagesCommunication.png")	
+	width: 102px
+	height: 97px
+
+.advantagesList__item--schedule::before
+	background-image: url("/img/advantagesSchedule.png")	
+	width: 112px
+	height: 96px	
+
+.photoContainer
+	position: relative
+	@media screen and (max-width: $mSize)
+		min-height: 600px
+		width: auto
+
+.teacherSlider__nav
+	display: flex
+	width: 780px
+	align-items: center
+	justify-content: space-between
+	position: absolute
+	top: 0
+	bottom: 0
+	@media screen and (max-width: $lSize)
+		left: 0
+		right: 0
+		margin: 0 auto
+		width: 580px
+	@media screen and (max-width: $mSize)
+		top: auto
+		left: 0
+		right: 0
+		width: 200px
+
+
+.teacherSlider__mainPhoto
+	text-align: center
+
+.boldText
+	font-family: $GilroyBold
+	font-size: $signSize
+	margin-bottom: 30px
+
+.arrow--right
+	transform: rotate(180deg)	
+
+.teacherSlider__currentPhoto
+	margin: 0 auto	
+
+.teacherSlider__listWrap
+	background-image: url("/img/bgTeachersList.png")
+	height: 347px
+	position: relative
+	overflow-x: hidden
+
+
+.teacherSlider__list
+	display: flex
+	position: absolute
+	min-width: 100%
+	height: 347px
+	justify-content: center
+	align-items: center
+	overflow-x: hidden
+
+.teacherSlider__teacher
+	width: 200px
+	height: 200px
+	margin-right: 20px
+
+.teacherSlider__teacher:last-child
+	margin-right: 0
+
+.teacherSlider__img
+	cursor: pointer
+
+.pictureCarousel__wrap
+	position: relative
+	width: 100%
+	height: 400px
+	margin-bottom: 50px
+	overflow-x: hidden
+	@media screen and (max-width: $lSize)
+		height: 280px	
+
+.pictureCarousel
+	display: flex
+	position: absolute
+	cursor: grab
+
+.pictureCarousel__item
+	width: 500px
+	height: 400px	
+	@media screen and (max-width: $lSize)
+		width: 350px
+		height: 280px		
+
+.pictureCarousel__nav
+	margin: 0 auto
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 132px
+	margin-bottom: 30px
+	@media screen and (max-width: $mSize)
+		display: none
+
+.pictureCarousel__arrow
+	width: 41px
+	height: 29px	
+
+.pictureCarousel__pagination
+	display: none
+	@media screen and (max-width: $mSize)
+		display: flex
+		justify-content: center
+		margin-bottom: 40px
+
+.pictureCarousel__dot
+	width: 12px
+	height: 12px
+	background-color: #000000
+	border-radius: 50%
+	margin-right: 10px
+	cursor: pointer
+
+
+.bigTitle
+	font-family: $laptev
+	font-size: 72px
+	font-weight: lighter
+	text-shadow: -1px 0 0
+	@media screen and (max-width: $mSize)
+		font-size: 48px
+
+.bigSubTitle
+	font-family: $laptev
+	font-size: $title
+	font-weight: lighter
+	text-shadow: -1px 0 0	
+	@media screen and (max-width: $mSize)
+		font-size: 32px
+
+.form__input
+	border: 1px solid $black
+	border-radius: 25px
+	width: 400px
+	height: 50px
+	padding-left: 20px
+	margin-bottom: 30px
+	@media screen and (max-width: $sSize)
+		width: 90%
+
+.form__input::placeholder 
+	color: #636363
+
+.form__input:focus 
+	outline: none
+	border: 1px solid yellow
+	border-radius: 25px
+
+.form__text
+	margin-bottom: 40px
+
+.tarrifsList
+	display: flex
+	justify-content: space-between
+
+.tarrifsList__term
+	font-family: $laptev
+	font-size: $secondTitle	
+	font-weight: lighter
+	color: $white	
+	margin-bottom: 20px
+
+.tarrifsList__card
+	background-image: url("/img/bgTarrifs.png")	
+	margin-right: 20px
+	width: 360px
+	height: 465px
+	text-align: left
+	padding-top: 70px
+	padding-left: 100px
+	position: relative
+
+.tarrifsList__includeList
+	color: $white
+	margin-left: -10px		
+
+.tarrifsList__include
+	margin-bottom: 10px	
+	list-style: inside
+	list-style-type:"— "
+
+.tarrifsList__price
+	font-family: $GilroyBold
+	font-size: 28px
+	color: $white
+	position: absolute	
+	bottom: 100px	
+
+.socialList
+	display: flex	
+
+.cocialList__item
+	margin-right: 10px	
+
+.cocialList__item:last-child
+	margin-right: 0		
+
+.burgerMenu
+	display: none 
+	cursor: pointer
+	width: 28px
+	height: 20px
+	position: absolute
+	right: 0
+	@media screen and (max-width: $xlSize)
+		display: block	
+
+.burgerMenu span 
+	display: block
+	position: absolute
+	height: 4px
+	width: 100%
+	background: $blue
+	opacity: 1
+	left: 0
+	transition: .25s ease-in-out
+
+.burgerMenu:hover span 
+	background-color: #E5B26F
+
+.burgerMenu:active span 
+	background-color: #AD7E40
+
+.burgerMenu span:nth-child(1) 
+	top: 0px
+
+.burgerMenu span:nth-child(2), .burgerMenu span:nth-child(3) 
+	top: 8px
+
+.burgerMenu span:nth-child(4) 
+	top: 16px
+
+.burgerMenu.openMenu span:nth-child(1) 
+	top: 18px
+	width: 0%
+	left: 50%
+
+.burgerMenu span:nth-child(3)
+	display: none	
+
+.burgerMenu.openMenu span:nth-child(2) 
+	transform: rotate(45deg)
+
+.burgerMenu.openMenu span:nth-child(3) 
+	transform: rotate(-45deg)
+
+.burgerMenu.openMenu span:nth-child(4) 
+	top: 18px
+	width: 0%
+	left: 50%	
+
+
+.map__wrap 
+	position: absolute
+	width: 1200px
+	@media screen and (max-width: $lSize)
+		position: static
+		width: auto
+		overflow-x: hidden
+		display: flex
+		justify-content: center		
+
+.map 
+	position: absolute
+	margin: 0 auto
+	width: 1200px
+	@media screen and (max-width: $lSize)
+		position: static
+		width: 100
+		width: 600px
+		height: 400px
+
+.map img
+	margin-left: auto
+	margin-right: 0
+
+
+

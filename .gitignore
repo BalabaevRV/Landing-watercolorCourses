@@ -4,3 +4,4 @@ npm-debug.log*
 prod
 dev/css/*.css
 dev/css/*.map
+notes.txt

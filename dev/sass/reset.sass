@@ -1,14 +1,12 @@
 @import fonts
-
-
-$black: #111111
-$text: Gilroy, sans-serif 
+@import settings
 
 html 
     scroll-behavior: smooth
     font-family: $text
     font-size: 18px
     color: $black
+    overflow-x: hidden
 
 .red
     border: 2px solid red
@@ -24,6 +22,9 @@ html
 
 .yellow 
     border: 2px solid yellow
+
+body
+    background-image: url("/img/bg.jpg")
 
 *,
 *::before,
@@ -60,7 +61,11 @@ body
 button, input, input::placeholder, a 
     font-family: inherit
     font-size: inherit
+    color: $black
+    text-decoration: none
 
 button
     border: none
 
+.hidden
+    display: none

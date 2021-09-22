@@ -12,7 +12,7 @@ const styles = () => {
     return src ("dev/sass/*.sass")
         .pipe(plumber())
         .pipe(sourcemaps.init("."))
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe (postcss([autoprefixer]))
         // .pipe(csso())
         // .pipe(rename("style.min.css"))
@@ -32,6 +32,7 @@ const server = () => {
 const watcher = () => {
     watch("dev/sass/*.sass", series("styles"));
     watch("dev/*.html").on("change", browserSync.reload);
+    watch("dev/css/*.css").on("change", browserSync.reload);
 }
 
 exports.server = server;

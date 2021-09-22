@@ -1,33 +1,76 @@
+@import settings
+
 .container
 	width: 1200px
 	margin: 0 auto
-	border: 2px solid blue
-
-.container:nth-child(2n) 
-	border-color: purple
-
-.mainNavigation
-	display: flex
-	justify-content: space-between
+	@media screen and (max-width: $xlSize)
+		width: 960px
+	@media screen and (max-width: $lSize)
+		width: 760px
+	@media screen and (max-width: $mSize)
+		width: 560px	
+	@media screen and (max-width: $sSize)
+		width: 400px	
+	@media screen and (max-width: $xsSize)
+		width: 320px				
 
 .hero
 	min-height: 820px
 	display: flex
 	align-items: center
-	margin-bottom: 220px
+	margin-bottom: 100px
+	position: relative
+	@media screen and (max-width: $lSize)
+		padding-bottom: 50px
+		min-height: 600px
+	@media screen and (max-width: $sSize)
+		flex-direction: column	
 
 .hero__text 
-	width: 50%
+	display: flex
+	flex-direction: column
+
+.hero__title
+	margin-bottom: 14px
+
+.hero__subTitle
+	margin-bottom: 40px	
+
+.hero__date
+	@media screen and (max-width: $lSize)
+		position: absolute	
+		bottom: 0
+
+.hero__img 
+	position: absolute
+	right: 0
+	z-index: -1
+	@media screen and (max-width: $xlSize)
+		position: static
+	@media screen and (max-width: $lSize)
+		height: 600px
+	@media screen and (max-width: $sSize)
+		height: auto
+
+				
+
 
 .hero__button
 	display: block
 	margin-bottom: 170px
+	@media screen and (max-width: $lSize)
+		margin-bottom: -100px
+
+.mainNavigation__text
+	@media screen and (max-width: $xlSize)
+		display: none	
 
 .aboutWatercolor
 	display: flex
-	flex-direction: flex-end
 	align-items: center
-	margin-bottom: 380px
+	margin-bottom: 150px
+	@media screen and (max-width: $mSize)
+		flex-direction: column-reverse
 
 
 .aboutWatercolor::before
@@ -38,40 +81,78 @@
 	height: 587px
 	width: 547px
 	content: ""
+	@media screen and (max-width: $mSize)
+		flex-direction: column-reverse
+		width: 100vh
+		transform: rotate(90deg) 
 
+.aboutWatercolor__title
+	margin-bottom: 36px
 
 .aboutWatercolor__textWrap 
 	width: 50%
 	margin-right: 0
+	@media screen and (max-width: $mSize)
+		width: 100%
+
+.aboutWatercolor__text
+	margin-left: 30px
+	max-width: 470px
 
 .stereotypes
-	display: flex
-	align-items: center
+	margin-bottom: 90px
+	position: relative
 
-.stereotypes::before
+.stereotypes__title
+	display: block
+	margin-bottom: 20px
+	text-align: center
+
+.stereotypes__flexWrap
+	width: 100%
+	display: flex
+	justify-content: center
+
+.stereotypes__wrap
+	width: 1200px
+	display: flex
+	justify-content: center
+	position: relative
+
+.stereotypes__wrap::before
 	background-image: url("/img/flamingohead.png")
 	background-repeat: no-repeat
-	background-position: center
+	background-position: right
 	display: block
 	height: 628px
 	width: 291px
+	margin-top: - 120px
 	content: ""
 
-.stereotypes::after
+.stereotypes__wrap::after
 	background-image: url("/img/flamingo.png")
 	background-repeat: no-repeat
-	background-position: center
+	background-position: left
 	display: block
 	height: 578px
 	width: 286px
+	margin-top: -120px
 	content: ""
 
-.stereotypes::after
-
-.stereotypes__textWrap 
+.stereotypes__text
 	text-align: center
+	margin: 0 auto
+	justify-content: space-between
 
-.stereotypes__textWrap::after
+.stereotypes__pargraph	
+	margin-bottom: 60px
+	@media screen and (max-width: $sSize)
+		margin-left: auto
+		margin-right: auto
+		width: 400px
+
+
+.stereotypes__text::after
 	background-image: url("/img/stereotypes.png")
 	background-repeat: no-repeat
 	background-position: center
@@ -81,33 +162,172 @@
 	content: ""
 	margin: 0 auto
 
+.stereotypes__text
+	margin-bottom: 52px	
+
+
 .advantages
+	margin-bottom: 200px
 	background-image: url("/img/backgroundFox.png")
 	background-repeat: no-repeat
-	background-position: center
-	background-size: cover
-	margin-bottom: 196px
+	background-position: center top 150px
+	background-size: auto
+	
+
+.advantages__title
+	margin-bottom: 20px
+
 
 .advantages__wrap
 	max-width: 450px
-	margin-bottom: 130px
+	margin-bottom: 200px
+	@media screen and (max-width: $mSize)
+		margin-bottom: 100px	
+
 
 .advantages__wrap:nth-child(2)
 	margin-right: 0 
 	margin-left: auto
+	@media screen and (max-width: $mSize)
+		margin-right: auto 
+		margin-left: 0
 
-.advantages__list
-	margin-bottom: 60px
 
 .teachers
+	background-image: url("/img/bgWatercolorSplash.png")
+	background-repeat: no-repeat
+
 	text-align: center
 	margin-bottom: 200px
+
+.teachers__title
+	margin-bottom: 85px	
 
 .teachers__photoContainer
 	width: 780px
 	margin: 0 auto
-	margin-bottom: 100px
+	margin-bottom: 30px
+
+
+.teachers__button	
+	margin-bottom: 90px
+
 
 .gallery
 	text-align: center
 	margin-bottom: 150px
+
+.gallery__title
+	margin-bottom: 56px	
+
+.bottom__wrap 
+	background-image: url("/img/bgOrangeWatercolorSplash.png"), url("/img/bgIceCream.png")
+	background-repeat: no-repeat
+	background-position: left, right bottom 100px
+
+.captureForm
+	background-image: url("/img/bgGirlWatercolor.png")
+	background-repeat: no-repeat
+	background-position: right top 160px
+	text-align: center
+	padding-bottom: 120px
+	margin-bottom: 170px
+	position: relative
+	@media screen and (max-width: $xlSize)
+		background-position: right -250px top 160px	
+	@media screen and (max-width: $mSize)
+		background-position: right -250px top
+	@media screen and (max-width: $xsSize)
+		background-position: right -300px top 160px			
+
+// .captureForm::before
+// 	background-image: url("/img/bgGirlWatercolor.png")
+// 	background-repeat: no-repeat
+// 	background-position: right
+// 	position: absolute
+// 	width: 1600px
+// 	left: 0
+// 	height: 575px
+// 	content: ""
+
+.captureForm__text
+	@media screen and (max-width: $mSize)	
+		max-width: 360px
+
+.captureForm__title
+	margin-bottom: 40px
+
+.captureForm__subTitle
+	margin-bottom: 50px
+	@media screen and (max-width: $lSize)
+		margin-left: auto
+		margin-right: auto
+		width: 80%
+
+.captureForm__text
+	margin-bottom: 60px
+
+
+.tariffs 
+	text-align: center
+	margin-bottom: 120px
+	position: relative
+	overflow-x: hidden
+
+.tariffs__title
+	margin-bottom: 65px	
+
+.tarriffs__wrap
+	width: 100%
+	display: flex
+	justify-content: center
+
+.tariffs__list
+	width: 1200px
+
+
+
+.contacts
+	display: flex
+	justify-content: center
+	margin-bottom: 100px
+	// @media screen and (max-width: $xlSize)
+	// 	width: auto
+	// 	// flex-direction: column
+	@media screen and (max-width: $lSize)
+		flex-direction: column
+		margin-bottom: 0
+
+.contacts__textWrap 
+	display: block
+	@media screen and (max-width: $lSize)
+		display: flex
+		text-align: center
+		flex-direction: column
+		align-items: center
+	@media screen and (max-width: $xsSize)
+		text-align: left
+		align-items: flex-start
+
+.contacts__title
+	margin-bottom: 25px
+
+.contacts__text
+	width: 45%
+	margin-bottom: 5px
+
+.contacts__text--last
+	margin-bottom: 40px	
+
+.copyright
+	position: relative
+	padding-bottom: 50px
+
+.copyright__text
+	position: absolute
+	@media screen and (max-width: $xlSize)
+		width: 190px
+	@media screen and (max-width: $lSize)
+		width: 100%
+		top: 20px
+		text-align: center

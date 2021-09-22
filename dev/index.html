@@ -6,12 +6,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Курс по акварельной живописи</title>
-    <link href="/css/layout.css" rel="stylesheet">
     <link href="/css/reset.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+    <link href="/css/blocks.css" rel="stylesheet">
 </head>
 <body>
+	<a href="index2.html">index</a>
     <header class="mainNavigation container">
-    	<a href="#" class="logo">Art Garden</a>
+    	<button class="burgerMenu"  aria-label="close">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+    	<a href="/" class="logo"></a>
     	<nav>
     		<ul class="mainNavigation__navigation navigationList">
 				<li class="navigationList__item"><a href="#" class="navigationList__link">О нас</a></li>
@@ -21,196 +29,230 @@
 				<li class="navigationList__item"><a href="#" class="navigationList__link">Контакты</a></li>
     		</ul>
     	</nav>	
-    	<adress>г. Санкт-Петербург, конюшная 4</adress>
-    	<a href="tel:+89524568232">тел. 8 (952) 456-82-32</a>
+    	<adress class="mainNavigation__text">г. Санкт-Петербург, конюшная 4</adress>
+    	<a href="tel:+89524568232" class="mainNavigation__text">тел. 8 (952) 456-82-32</a>
     </header>
     <main>
     	<section class="hero container">
     		<div class="hero__text">
-	    		<h1 class="mainTitle">Научим рисовать акварелью</h1>
-	    		<h2 class="subTitle">Раскроем твой творческий потенциал на все 100%</h2>
+	    		<h1 class="hero__title mainTitle">Научим рисовать <br> акварелью</h1>				    		
+	    		<h2 class="hero__subTitle subTitle">Раскроем твой творческий <br> потенциал на все 100%</h2>
 	    		<a href="#" class="hero__button button">Записаться</a>
-	    		<h3 class="">Следующий старт 24 июня 2020</h3>
+	    		<h3 class="hero__date">Следующий старт 24 июня 2020</h3>
     		</div>
-    		<img src="img/hero.png" alt="Нарисованная акварелью девушка">
+    		<img class="hero__img" src="img/hero.png" alt="Нарисованная акварелью девушка">
     	</section>
     	<section class="aboutWatercolor container">
     		<div class="aboutWatercolor__textWrap">
-    			<h1 class="title">Самая легкая и воздушная</h1>
-    			<article class="text">
-    			Акварель — это интересный воздушный материал.  С помощью акварели можно создавать удивительно  легкие и в то же время глубоки картины. 
-    			<br>	
+    			<h1 class="aboutWatercolor__title title title--purple">Самая легкая и воздушная</h1>
+    			<article class="aboutWatercolor__text text">
+    			Акварель — это интересный воздушный материал. С помощью акварели можно создавать удивительно легкие и в то же время глубоки картины. 
+    			<br><br>
 				Рисованию акварелью — это волшебный процесс 
 				и удивительный результат, если перестать бояться 
 				и научиться им пользоваться.
-				<br>	
+				<br><br>	
 				Сделать это вы сможете на нашем курсе!
     		</article>
     		</div>
     	</section>
-    	<section class="stereotypes container">
-    		<div class="stereotypes__textWrap">
-    		<h1 class="title">Ломаем стереотипы</h1>
-	    		<ul class="stereotypes__list stereotypesList">
-	    			<li class="stereotypesList__item">Акварель — это сложный и непонятный материал</li>
-	    			<li class="stereotypesList__item">Чтобы уметь рисовать нужно иметь врожденный талант</li>
-	    			<li class="stereotypesList__item">Чтобы уметь рисовать нужно было учиться еще с детства</li>
-	    			<li class="stereotypesList__item">Чтобы уметь рисовать нужны годы практики</li>
-	    		</ul>
-	    		<p class="stereotypes__text text">И это далеко не весь список стереотипов, которые мы разрушаем на наших занятиях</p>
-    		</div>	
+    	<section class="stereotypes">
+    		<h1 class="stereotypes__title title title--pink">Ломаем стереотипы</h1>
+    		<div class="stereotypes__flexWrap">
+	    		<div class="stereotypes__wrap">
+					<div class="stereotypes__text">
+			    		<ul class="stereotypes__list stereotypesList">
+			    			<li class="stereotypesList__item">Акварель — это сложный и непонятный материал</li>
+			    			<li class="stereotypesList__item">Чтобы уметь рисовать нужно иметь врожденный талант</li>
+			    			<li class="stereotypesList__item">Чтобы уметь рисовать нужно было учиться еще с детства</li>
+			    			<li class="stereotypesList__item">Чтобы уметь рисовать нужны годы практики</li>
+			    		</ul>
+			    		<p class="stereotypes__pargraph text">И это далеко не весь список стереотипов, которые мы разрушаем на наших занятиях</p>
+					</div>	
+				</div>
+			</div>
     	</section>
-    	<section class="advantages container">
-    		<h1 class="title">С нами тебя ждет</h1>
-    		<dl class="advantages__list">
-    			<div class="advantages__wrap">
-					<dt class="advantagesList__term">Индивидуальный подход</dt>
-					<dd>Наши преподаватели опытные художники, умеющие найти подход к каждому ученику. Нами была разработана уникальная методика, по которой может научиться рисовать любой взрослый человек, даже если он никогда не брал кисть в руки</dd>
-    			</div>
-    			<div class="advantages__wrap">
-					<dt class="advantagesList__term">Волшебная атмосфера</dt>
-					<dd>Позитивная и уютная атмосфера способствует лучшему пониманию материала. На занятиях всегда весело и интересно. В доступе кофе, чай и печенюшки. В нашем пространстве царит волшебная атмосфера, в которой люди открывают себя по новой, раскрепощаясь не только в рисунке, но и в общении!</dd>
-    			</div>
-    			<div class="advantages__wrap">
-					<dt class="advantagesList__term">Качественные материалы</dt>
-					<dd>Материалы, при рисовании акварелью, имеют большое значение. Порой хорошо подобранная бумага очень сильно влияет на конечный результат. Важно чтобы в составе бумаге содержался хлопок. Мы сразу даем ученикам качественные материалы. Так как это один из элементов успеха</dd>
-    			</div>
-    		</dl>
-			<ul class="advantages__iconList iconList">
-				<li class="iconList__item iconList__item--time">Занятие длится 90 мин. Вы можете выбрать удобное для себя расписание</li>
-				<li class="iconList__item iconList__item--time">Большая часть времени отводится под практику. Материалы предоставляются</li>
-				<li class="iconList__item iconList__item--time">Наши преподаватели объясняют сложные вещи простыми словами</li>
-				<li class="iconList__item iconList__item--time">Вы получаете домашнее задание, которое разбирается на занятиях</li>	
+    	<section class="advantages">
+    		<div class="container">
+	    		<h1 class="advantages__title title title--orange">С нами тебя ждет</h1>
+	    		<dl class="advantages__list">
+	    			<div class="advantages__wrap">
+						<dt class="advantagesList__term">Индивидуальный подход</dt>
+						<dd>Наши преподаватели опытные художники, умеющие найти подход к каждому ученику. Нами была разработана уникальная методика, по которой может научиться рисовать любой взрослый человек, даже если он никогда не брал кисть в руки</dd>
+	    			</div>
+	    			<div class="advantages__wrap">
+						<dt class="advantagesList__term">Волшебная атмосфера</dt>
+						<dd>Позитивная и уютная атмосфера способствует лучшему пониманию материала. На занятиях всегда весело и интересно. В доступе кофе, чай и печенюшки. В нашем пространстве царит волшебная атмосфера, в которой люди открывают себя по новой, раскрепощаясь не только в рисунке, но и в общении!</dd>
+	    			</div>
+	    			<div class="advantages__wrap">
+						<dt class="advantagesList__term">Качественные материалы</dt>
+						<dd>Материалы, при рисовании акварелью, имеют большое значение. Порой хорошо подобранная бумага очень сильно влияет на конечный результат. Важно чтобы в составе бумаге содержался хлопок. Мы сразу даем ученикам качественные материалы. Так как это один из элементов успеха</dd>
+	    			</div>
+	    		</dl>
+    		</div>
+			<ul class="advantages__listIcons advantagesList container">
+				<li class="advantagesList__item advantagesList__item--time">Занятие длится 90 мин. Вы можете выбрать удобное для себя расписание</li>
+				<li class="advantagesList__item advantagesList__item--practice">Большая часть времени отводится под практику. Материалы предоставляются</li>
+				<li class="advantagesList__item advantagesList__item--communication">Наши преподаватели объясняют сложные вещи простыми словами</li>
+				<li class="advantagesList__item advantagesList__item--schedule">Вы получаете домашнее задание, которое разбирается на занятиях</li>	
 			</ul>
     	</section>
     	<section class="teachers">
-    		<h1 class="title">Наша команда</h1>
-    		<div class="teachers__photoContainer">
+    		<h1 class="teachers__title title title--blue">Наша команда</h1>
+    		<div class="teachers__photoContainer photoContainer">
     			<ul class="teachers__nav teacherSlider__nav">
-    				<li class="teacherSlider__arrow"><img src="img/arrow.png" alt="Left click"></li>
-    				<li class="teacherSlider__arrow"><img src="img/arrow.png" alt="Right click"></li>
+    				<li class="arrow"><img src="img/arrow.png" alt="Left click"></li>
+    				<li class="arrow--right"><img src="img/arrow.png" alt="Right click"></li>
     			</ul>
-    			<figure class="teacherSlider__mainPhoto red">
-    				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px">
+    			<figure class="teacherSlider__mainPhoto">
+    				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
+    				<figcaption class="boldText">Литвинова Анна</figcaption>
     			</figure>
-    			<figcaption class="teachers__sign">Литвинова Анна</figcaption>
     		</div>
-    		<ul class="teacherSlider__list">
-    			<li class="teacherSlider__teacher"><img src="img/teachSidorovaSofia-min.jpg" alt="Преподаватель — Сидорова София"></li>
-    			<li class="teacherSlider__teacher"><img src="img/teachTroitskaiMaria-min.jpg" alt="Преподаватель — Троицкая Мария"></li>    
-				<li class="teacherSlider__teacher"><img src="img/teachVolkovMihail-min.jpg" alt="Преподаватель — Волков Михаил"></li>
-    			<li class="teacherSlider__teacher"><img src="img/teachPavlovAlexander-min.jpg" alt="Преподаватель — Павлов Александр"></li> 	
-				<li class="teacherSlider__teacher"><img src="img/teachLitvinovaAnna-min.jpg" alt="Преподаватель — Литвинова Анна"></li>
-    			<li class="teacherSlider__teacher"><img src="img/teachMelkinovaIrina-min.jpg" alt="Преподаватель — Мельникова Ирина"></li> 	    					
-    		</ul>
+    		<button class="teachers__button button button--big">Посмотреть работы</button>
+    		<div class="teacherSlider__listWrap">
+				<ul class="teacherSlider__list">
+					<li class="teacherSlider__teacher"><img src="img/teachSidorovaSofia-min.jpg" alt="Преподаватель — Сидорова София" class="teacherSlider__img"></li>
+					<li class="teacherSlider__teacher"><img src="img/teachTroitskaiMaria-min.jpg" alt="Преподаватель — Троицкая Мария" class="teacherSlider__img"></li>   
+					<li class="teacherSlider__teacher"><img src="img/teachVolkovMihail-min.jpg" alt="Преподаватель — Волков Михаил" class="teacherSlider__img"></li>
+					<li class="teacherSlider__teacher"><img src="img/teachPavlovAlexander-min.jpg" alt="Преподаватель — Павлов Александр" class="teacherSlider__img"></li> 
+					<li class="teacherSlider__teacher"><img src="img/teachLitvinovaAnna-min.jpg" alt="Преподаватель — Литвинова Анна" class="teacherSlider__img"></li>
+					<li class="teacherSlider__teacher"><img src="img/teachMelkinovaIrina-min.jpg" alt="Преподаватель — Мельникова Ирина" class="teacherSlider__img"></li>
+				</ul>
+    		</div>
     	</section>
     	<section class="gallery">
-    		<h1 class="title">Работы учеников</h1>
-    		<ul class="pictureCarousel">
-    			<li class="pictureCarousel_item"><img src="img/imgSlide1.jpg" alt="Картина 1"></li>	
-    			<li class="pictureCarousel_item"><img src="img/imgSlide2.jpg" alt="Картина 1"></li>	 
-    			<li class="pictureCarousel_item"><img src="img/imgSlide3.jpg" alt="Картина 1"></li>	
-    			<li class="pictureCarousel_item"><img src="img/imgSlide4.jpg" alt="Картина 1"></li>	
-    		</ul>
+    		<h1 class="gallery__title title title--darkPurple">Работы учеников</h1>
+    		<div class="pictureCarousel__wrap">
+	    		<ul class="pictureCarousel">
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide1.jpg" alt="Картина 1"></li>	
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide2.jpg" alt="Картина 1"></li>	 
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide3.jpg" alt="Картина 1"></li>	
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide4.jpg" alt="Картина 1"></li>	
+	    		</ul>
+    		</div>
     		<ul class="pictureCarousel__nav">
-    			<li class=""><img src="img/arrow.png" alt="Left click"></li>
-    			<li class=""><img src="img/arrow.png" alt="Right click"></li>
+    			<li class="pictureCarousel__arrow arrow"><img src="img/arrow.png" alt="Left click"></li>
+    			<li class="pictureCarousel__arrow arrow--right"><img src="img/arrow.png" alt="Right click"></li>
     		</ul>
-    		<button class="button">
+    		<ul class="pictureCarousel__pagination">
+    			<li class="pictureCarousel__dot pictureCarousel__dot--active"></li>
+				<li class="pictureCarousel__dot"></li>
+				<li class="pictureCarousel__dot"></li>
+				<li class="pictureCarousel__dot"></li>
+				<li class="pictureCarousel__dot"></li>
+    		</ul>
+    		<button class="button button--big">
  				Еще работы   			
     		</button>
     	</section>
-    	<section class="captureForm container">
-    		<h1 class="bigTitle">Ты сможешь рисовать, даже если никогда не брал кисть в руки!</h1>	
-    		<p class="bigSubTitle">Попробуй на бесплтаном пробном уроке</p>
-    		<p>Оставьте номер телефона и мы перезвоним вам, 
-ответим на все вопросы и запишем на пробное занятие</p>
-			<form>
-				<input type="tel" class="formInput">
-				<p>Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
-				<button class="button">Записаться</button>
-			</form>
-    	</section>
-    	<section class="tariffs container">
-    		<dl class="tarrifsList">
-    			<div class="tarrifsList__card">
-	    			<dt class="tarrifsList__term">Базовый</dt>
-    				<dd>
-    					<ul class="tarrifsList__includeList">
-    						<li class="tariffsCard__include">2 месяца занятий</li>
-    						<li class="tariffsCard__include">2 занятия в неделю</li>
-    						<li class="tariffsCard__include">Разбор работ</li>
-    						<li class="tariffsCard__include">Материалы</li>
-    					</ul>
-    					<p class="tarrifsList__price">6999 ₽</p>
-    				</dd>
-	    		</div>		
-	    	</dl>
-	    	<dl class="tarrifsList">
-    			<div class="tarrifsList__card">
-	    			<dt class="tarrifsList__term">Расширенный</dt>
-    				<dd>
-    					<ul class="tarrifsList__includeList">
-    						<li class="tariffsCard__include">3 месяца занятий</li>
-    						<li class="tariffsCard__include">2 занятия в неделю</li>
-    						<li class="tariffsCard__include">Разбор работ</li>
-    						<li class="tariffsCard__include">Материалы</li>
-    					</ul>
-    					<p class="tarrifsList__price">7999 ₽</p>
-    				</dd>
-	    		</div>		
-	    	</dl>
-	    	<dl class="tarrifsList">
-    			<div class="tarrifsList__card">
-	    			<dt class="tarrifsList__term">Премиум</dt>
-    				<dd>
-    					<ul class="tarrifsList__includeList">
-    						<li class="tariffsCard__include">3 месяца занятий</li>
-    						<li class="tariffsCard__include">3 занятия в неделю</li>
-    						<li class="tariffsCard__include">Разбор работ</li>
-    						<li class="tariffsCard__include">Материалы</li>
-    						<li class="tariffsCard__include">Выезд на пленер</li>
-    						<li class="tariffsCard__include">4 видео-урока</li>
-    					</ul>
-    					<p class="tarrifsList__price">7999 ₽</p>
-    				</dd>
-	    		</div>		
-	    	</dl>	
-	    	<button class="button">Записаться</button>	
-    	</section>
-    	<section class="contacts">
-    		<div class="contacts_textWrap">
-    			<h1>Контакты</h1>
-    			<address>г. Россия, 195271 Санкт-Петербург, конюшная 4</address>
-    			<a href="tel:+89524568232">тел. 8 (952) 456-82-32</a>
-    			<a href="mailto:WonderArt@gmail.com">e-mail WonderArt@gmail.com</a>
-    			<ul class="socialList">
-    				<li class="cocialList__item">
-    					<a href="#">
-    						<img src="img/instagram.png" alt="Youtube">
-    					</a>
-    				</li>	
-    				<li class="cocialList__item">
-    					<a href="#">
-    						<img src="img/youtube.png" alt="Instagram">
-    					</a>
-    				</li>	
-    				<li class="cocialList__item">	
-    					<a href="#">
-    						<img src="img/fb.png" alt="facebook">
-    					</a>
-    				</li>	
-    			</li>
-    			</ul>
-    		</div>
-    		<div class="map">
-    			<img src="img/map.png" alt="">
-    		</div>
-    	</section>
+    	<div class="bottom__wrap">
+	    	<section class="captureForm">
+	    		<div class="captureForm__text container">
+		    		<h1 class="captureForm__title bigTitle">Ты сможешь рисовать, <br> даже если никогда не брал кисть в руки!</h1>	
+		    		<p class="captureForm__subTitle bigSubTitle">Попробуй на бесплтаном пробном уроке</p>
+		    		<p class="captureForm__text boldText">Оставьте номер телефона и мы перезвоним вам, <br> ответим на все вопросы и запишем на пробное занятие</p>
+					<form>
+						<input type="tel" class="form__input" placeholder="Телефон">
+						<p class="form__text">Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+						<button class="button button--big">Записаться</button>
+					</form>
+				</div>
+	    	</section>
+	    	<section class="tariffs">
+	    		<h1 class="tariffs__title title title--darkPing">Наши тарифы</h1>	
+	    		<div class="tarriffs__wrap">
+	    		<dl class="tariffs__list tarrifsList">
+	    			<div class="tarrifsList__card">
+		    			<dt class="tarrifsList__term">Базовый</dt>
+	    				<dd>
+	    					<ul class="tarrifsList__includeList">
+	    						<li class="tarrifsList__include">2 месяца занятий</li>
+	    						<li class="tarrifsList__include">2 занятия в неделю</li>
+	    						<li class="tarrifsList__include">Разбор работ</li>
+	    						<li class="tarrifsList__include">Материалы</li>
+	    					</ul>
+	    					<p class="tarrifsList__price">6999 ₽</p>
+	    				</dd>
+		    		</div>		
+	    			<div class="tarrifsList__card">
+		    			<dt class="tarrifsList__term">Расширенный</dt>
+	    				<dd>
+	    					<ul class="tarrifsList__includeList">
+	    						<li class="tarrifsList__include">3 месяца занятий</li>
+	    						<li class="tarrifsList__include">2 занятия в неделю</li>
+	    						<li class="tarrifsList__include">Разбор работ</li>
+	    						<li class="tarrifsList__include">Материалы</li>
+	    					</ul>
+	    					<p class="tarrifsList__price">7999 ₽</p>
+	    				</dd>
+		    		</div>		
+		    		<div class="tarrifsList__card">
+		    			<dt class="tarrifsList__term">Премиум</dt>
+	    				<dd>
+	    					<ul class="tarrifsList__includeList">
+	    						<li class="tarrifsList__include">3 месяца занятий</li>
+	    						<li class="tarrifsList__include">3 занятия в неделю</li>
+	    						<li class="tarrifsList__include">Разбор работ</li>
+	    						<li class="tarrifsList__include">Материалы</li>
+	    						<li class="tarrifsList__include">Выезд на пленер</li>
+	    						<li class="tarrifsList__include">4 видео-урока</li>
+	    					</ul>
+	    					<p class="tarrifsList__price">9999 ₽</p>
+	    				</dd>
+		    		</div>		
+		    	</dl>
+		    	</div>	
+		    	<button class="button button--noPadding">Записаться</button>	
+	    	</section>
+	    	<section class="contacts">
+	    		<div class="contacts__textWrap container">
+	    			<h1 class="contacts__title title title--black">Контакты</h1>
+	    			<address class="contacts__text">г. Россия, 195271 Санкт-Петербург, конюшная 4</address>
+	    			<p class="contacts__text">
+	    				<a href="tel:+89524568232">тел. 8 (952) 456-82-32</a></p>
+	    			<p/>	
+	    			<p class="contacts__text contacts__text--last">
+	    				<a href="mailto:WonderArt@gmail.com">e-mail WonderArt@gmail.com</a>
+	    			</p>
+	    			<ul class="socialList">
+	    				<li class="cocialList__item">
+	    					<a href="#">
+	    						<img src="img/instagram.png" alt="Youtube">
+	    					</a>
+	    				</li>	
+	    				<li class="cocialList__item">
+	    					<a href="#">
+	    						<img src="img/youtube.png" alt="Instagram">
+	    					</a>
+	    				</li>	
+	    				<li class="cocialList__item">	
+	    					<a href="#">
+	    						<img src="img/fb.png" alt="facebook">
+	    					</a>
+	    				</li>	
+	    			</li>
+	    			</li>
+	    			</ul>
+	    		</div>
+	    		<div class="map__wrap">
+	    			<div>
+						<div class="map">
+		    				<img src="/img/map.png" alt="" width="600" height="400">
+		  				</div>
+	  				</div>
+				</div>	
+<!-- 
+	    		<div class="map">
+	    			<img src="img/map.png" alt="" width="600" height="400">
+	    		</div> -->
+	    	</section>
+	    	</div>
+    	</div>
     </main>
     <footer>
-    	<section class="copyright">
-    		<p class="copyrightText">© 2020 WonderArt. Все права защищены</p>		
+    	<section class="copyright container">
+    		<p class="copyright__text">© 2020 WonderArt. Все права защищены</p>		
     	</section>
     </footer>
     <style>
