@@ -279,7 +279,8 @@
 .arrow
 	width: 80px
 	height: 55px
-	background-image: url("/img/arrow.png")
+	background: none
+	background-image: url("/img/arrow.png"), url("/img/arrowHover.png"), url("/img/arrowActive.png")
 	cursor: pointer
 
 .arrow:hover
@@ -433,8 +434,10 @@
 
 .tarrifsList__card
 	background-image: url("/img/bgTarrifs.png")	
+	background-repeat: no-repeat
+	cursor: pointer
 	width: 360px
-	height: 465px
+	height: 550px
 	text-align: left
 	padding-top: 70px
 	padding-left: 100px
@@ -449,12 +452,18 @@
 	list-style: inside
 	list-style-type:"— "
 
+.tarrifsList__button
+	position: absolute
+	bottom: 0 
+	right: 53px
+	display: none
+
 .tarrifsList__price
 	font-family: $GilroyBold
 	font-size: 28px
 	color: $white
 	position: absolute	
-	bottom: 100px	
+	bottom: 194px	
 
 .socialList
 	display: flex	
