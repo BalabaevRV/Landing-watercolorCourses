@@ -516,6 +516,7 @@
 	height: 20px
 	position: absolute
 	right: 0
+	z-index: 12
 	@media screen and (max-width: $xlSize)
 		display: block	
 
@@ -563,9 +564,6 @@
 	width: 0%
 	left: 50%	
 
-
-	
-
 .map 
 	position: absolute
 	margin: 0 auto
@@ -580,5 +578,73 @@ iframe
 	margin-left: auto
 	margin-right: 0
 
+.popUp
+	background-color: rgba(0, 0, 0, 0.9)
+	position: fixed
+	width: 100%
+	height: 100%
+	z-index: 10
 
+.popUp__window
+	position: absolute
+	margin: auto
+	display: flex
+	align-items: center
+	justify-content: center
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0 
+	max-width: 400px
+	max-height: 200px
+	z-index: 20
+	background-color: $white
+	flex-direction: column
+
+.popUp__mobileMenu
+	position: absolute
+	margin: auto
+	right: 0
+	top: 0 
+	width: 90%
+	height: 90%
+	z-index: 20
+	background-color: $white
+
+.popUp__paragraph
+	max-width: 80%
+	text-align: center
+	margin-bottom: 20px
+
+.popUp__close
+	border: none
+	background: none
+	position: absolute
+	cursor: pointer
+	z-index: 12
+	width: 28px
+	height: 28px
+	top: 3px
+	right: 4px
+
+.popUp__close span
+	display: block
+	position: absolute
+	height: 4px
+	width: 100%
+	background: $black
+	opacity: 1
+	left: 0
+
+.popUp__close span:nth-child(1) 
+	transform: rotate(45deg)
+
+.popUp__close span:nth-child(2) 
+	transform: rotate(-45deg)	
+
+.popUp__close:hover span 
+	background-color: $hover
+
+.popUp__close:active span 
+	background-color: $active
 
