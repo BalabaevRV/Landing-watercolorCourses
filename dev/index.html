@@ -21,11 +21,11 @@
     	<a href="/" class="logo"></a>
     	<nav>
     		<ul class="mainNavigation__navigation navigationList">
-				<li class="navigationList__item"><a href="#" class="link">О нас</a></li>
-				<li class="navigationList__item"><a href="#" class="link">Галерея</a></li>
-				<li class="navigationList__item"><a href="#" class="link">Преподаватели</a></li>
-				<li class="navigationList__item"><a href="#" class="link">Тарифы</a></li>
-				<li class="navigationList__item"><a href="#" class="link">Контакты</a></li>
+				<li class="navigationList__item"><a href="#aboutUs" class="link">О нас</a></li>
+				<li class="navigationList__item"><a href="#gallery" class="link">Галерея</a></li>
+				<li class="navigationList__item"><a href="#teachers" class="link">Преподаватели</a></li>
+				<li class="navigationList__item"><a href="#tarrifs" class="link">Тарифы</a></li>
+				<li class="navigationList__item"><a href="#contacts" class="link">Контакты</a></li>
     		</ul>
     	</nav>	
     	<adress class="mainNavigation__text">г. Санкт-Петербург, конюшная 4</adress>
@@ -36,7 +36,7 @@
     		<div class="hero__text">
 	    		<h1 class="hero__title mainTitle">Научим рисовать <br> акварелью</h1>				  	
 	    		<h2 class="hero__subTitle subTitle">Раскроем твой творческий <br> потенциал на все 100%</h2>
-	    		<a href="#" class="hero__button button">
+	    		<a href="#captureForm" class="hero__button button">
 	    			<svg width="224" height="69">
 						<use xlink:href="/img/sprite.svg#bgButton"></use>
 					</svg><p class="button__sign">Записаться</p></a>
@@ -74,7 +74,7 @@
 				</div>
 			</div>
     	</section>
-    	<section class="advantages">
+    	<section class="advantages" id="aboutUs">
     		<div class="advantages__text container">
 	    		<h1 class="advantages__title title title--orange">С нами тебя ждет</h1>
 	    		<dl class="advantages__list">
@@ -99,7 +99,7 @@
 				<li class="advantagesList__item advantagesList__item--schedule">Вы получаете домашнее задание, которое разбирается на занятиях</li>	
 			</ul>
     	</section>
-    	<section class="teachers">
+    	<section class="teachers" id="teachers">
     		<h1 class="teachers__title title title--blue">Наша команда</h1>
     		<div class="teachers__photoContainer photoContainer">
     			<ul class="teachers__nav teacherSlider__nav">
@@ -136,7 +136,7 @@
 				</ul>
     		</div>
     	</section>
-    	<section class="gallery">
+    	<section class="gallery" id="gallery">
     		<h1 class="gallery__title title title--darkPurple">Работы учеников</h1>
     		<div class="pictureCarousel__wrap">
 	    		<ul class="pictureCarousel">
@@ -173,7 +173,7 @@
 			</button>
     	</section>
     	<div class="bottom__wrap">
-	    	<section class="captureForm">
+	    	<section class="captureForm" id="captureForm">
 	    		<div class="captureForm__text container">
 		    		<h1 class="captureForm__title bigTitle">Ты сможешь рисовать, <br> даже если никогда не брал кисть в руки!</h1>	
 		    		<p class="captureForm__subTitle bigSubTitle">Попробуй на бесплтаном пробном уроке</p>
@@ -181,16 +181,16 @@
 					<form>
 						<input type="tel" class="form__input" placeholder="Телефон">
 						<p class="form__text">Нажимая на кнопку, вы соглашаетесь с <a class="form__link" href="#">политикой конфиденциальности</a></p>
-    		 			<button class="button button--big">
+    		 			<a href="#captureForm" class="button button--big">
     						<svg width="297" height="92">
 								<use xlink:href="/img/sprite.svg#bgButton"></use>
 							</svg>
 							<p class="button__sign button__sign--big">Записаться</p>
-						</button>
+						</a>
 					</form>
 				</div>
 	    	</section>
-	    	<section class="tariffs">
+	    	<section class="tariffs" id="tariffs">
 	    		<h1 class="tariffs__title title title--darkPing">Наши тарифы</h1>	
 	    		<div class="tarriffs__wrap">
 	    		<dl class="tariffs__list tarrifsList">
@@ -205,12 +205,12 @@
 	    					</ul>
 	    					<p class="tarrifsList__price">6999 ₽</p>
 	    				</dd>
-						<button class="button tarrifsList__button">
+						<a href="#captureForm" class="button tarrifsList__button">
 							<svg width="224" height="69">
 								<use xlink:href="/img/sprite.svg#bgButton"></use>
 							</svg>
 							<p class="button__sign">Записаться</p>
-						</button>	    				
+						</a>	    				
 		    		</div>		
 	    			<div class="tarrifsList__card">
 		    			<dt class="tarrifsList__term">Расширенный</dt>
@@ -223,12 +223,12 @@
 	    					</ul>
 	    					<p class="tarrifsList__price">7999 ₽</p>
 	    				</dd>
-						<button class="button tarrifsList__button">
+						<a href="#captureForm" class="button tarrifsList__button">
 							<svg width="224" height="69">
 								<use xlink:href="/img/sprite.svg#bgButton"></use>
 							</svg>
 							<p class="button__sign">Записаться</p>
-						</button>
+						</a>
 		    		</div>		
 		    		<div class="tarrifsList__card">
 		    			<dt class="tarrifsList__term">Премиум</dt>
@@ -253,7 +253,7 @@
 		    	</dl>
 		    	</div>		
 	    	</section>
-	    	<section class="contacts">
+	    	<section class="contacts" id="contacts">
 	    		<div class="contacts__textWrap container">
 	    			<h1 class="contacts__title title title--black">Контакты</h1>
 	    			<address class="contacts__text">г. Россия, 195271 Санкт-Петербург, конюшная 4</address>
