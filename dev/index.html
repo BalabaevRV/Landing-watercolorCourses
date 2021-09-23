@@ -11,7 +11,6 @@
     <link href="/css/blocks.css" rel="stylesheet">
 </head>
 <body>
-	<a href="index2.html">index</a>
     <header class="mainNavigation container">
     	<button class="burgerMenu"  aria-label="close">
 			<span></span>
@@ -22,15 +21,15 @@
     	<a href="/" class="logo"></a>
     	<nav>
     		<ul class="mainNavigation__navigation navigationList">
-				<li class="navigationList__item"><a href="#" class="navigationList__link">О нас</a></li>
-				<li class="navigationList__item"><a href="#" class="navigationList__link">Галерея</a></li>
-				<li class="navigationList__item"><a href="#" class="navigationList__link">Преподаватели</a></li>
-				<li class="navigationList__item"><a href="#" class="navigationList__link">Тарифы</a></li>
-				<li class="navigationList__item"><a href="#" class="navigationList__link">Контакты</a></li>
+				<li class="navigationList__item"><a href="#" class="link">О нас</a></li>
+				<li class="navigationList__item"><a href="#" class="link">Галерея</a></li>
+				<li class="navigationList__item"><a href="#" class="link">Преподаватели</a></li>
+				<li class="navigationList__item"><a href="#" class="link">Тарифы</a></li>
+				<li class="navigationList__item"><a href="#" class="link">Контакты</a></li>
     		</ul>
     	</nav>	
     	<adress class="mainNavigation__text">г. Санкт-Петербург, конюшная 4</adress>
-    	<a href="tel:+89524568232" class="mainNavigation__text">тел. 8 (952) 456-82-32</a>
+    	<a href="tel:+89524568232" class="mainNavigation__text link">тел. 8 (952) 456-82-32</a>
     </header>
     <main>
     	<section class="hero container">
@@ -73,20 +72,20 @@
 			</div>
     	</section>
     	<section class="advantages">
-    		<div class="container">
+    		<div class="advantages__text container">
 	    		<h1 class="advantages__title title title--orange">С нами тебя ждет</h1>
 	    		<dl class="advantages__list">
 	    			<div class="advantages__wrap">
 						<dt class="advantagesList__term">Индивидуальный подход</dt>
-						<dd>Наши преподаватели опытные художники, умеющие найти подход к каждому ученику. Нами была разработана уникальная методика, по которой может научиться рисовать любой взрослый человек, даже если он никогда не брал кисть в руки</dd>
+						<dd class="text">Наши преподаватели опытные художники, умеющие найти подход к каждому ученику. Нами была разработана уникальная методика, по которой может научиться рисовать любой взрослый человек, даже если он никогда не брал кисть в руки</dd>
 	    			</div>
 	    			<div class="advantages__wrap">
 						<dt class="advantagesList__term">Волшебная атмосфера</dt>
-						<dd>Позитивная и уютная атмосфера способствует лучшему пониманию материала. На занятиях всегда весело и интересно. В доступе кофе, чай и печенюшки. В нашем пространстве царит волшебная атмосфера, в которой люди открывают себя по новой, раскрепощаясь не только в рисунке, но и в общении!</dd>
+						<dd class="text">Позитивная и уютная атмосфера способствует лучшему пониманию материала. На занятиях всегда весело и интересно. В доступе кофе, чай и печенюшки. В нашем пространстве царит волшебная атмосфера, в которой люди открывают себя по новой, раскрепощаясь не только в рисунке, но и в общении!</dd>
 	    			</div>
 	    			<div class="advantages__wrap">
 						<dt class="advantagesList__term">Качественные материалы</dt>
-						<dd>Материалы, при рисовании акварелью, имеют большое значение. Порой хорошо подобранная бумага очень сильно влияет на конечный результат. Важно чтобы в составе бумаге содержался хлопок. Мы сразу даем ученикам качественные материалы. Так как это один из элементов успеха</dd>
+						<dd class="text">Материалы, при рисовании акварелью, имеют большое значение. Порой хорошо подобранная бумага очень сильно влияет на конечный результат. Важно чтобы в составе бумаге содержался хлопок. Мы сразу даем ученикам качественные материалы. Так как это один из элементов успеха</dd>
 	    			</div>
 	    		</dl>
     		</div>
@@ -101,12 +100,12 @@
     		<h1 class="teachers__title title title--blue">Наша команда</h1>
     		<div class="teachers__photoContainer photoContainer">
     			<ul class="teachers__nav teacherSlider__nav">
-    				<li class="arrow"><img src="img/arrow.png" alt="Left click"></li>
-    				<li class="arrow--right"><img src="img/arrow.png" alt="Right click"></li>
+    				<li><button class="arrow" aria-label="Left click"></button></li>
+    				<li><button class="arrow arrow--right" aria-label="Right click"></button></li>
     			</ul>
     			<figure class="teacherSlider__mainPhoto">
     				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
-    				<figcaption class="boldText">Литвинова Анна</figcaption>
+    				<figcaption class="teacherSlider__sign boldText">Литвинова Анна</figcaption>
     			</figure>
     		</div>
     		<button class="teachers__button button button--big">Посмотреть работы</button>
@@ -154,7 +153,7 @@
 		    		<p class="captureForm__text boldText">Оставьте номер телефона и мы перезвоним вам, <br> ответим на все вопросы и запишем на пробное занятие</p>
 					<form>
 						<input type="tel" class="form__input" placeholder="Телефон">
-						<p class="form__text">Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+						<p class="form__text">Нажимая на кнопку, вы соглашаетесь с <a class="form__link" href="#">политикой конфиденциальности</a></p>
 						<button class="button button--big">Записаться</button>
 					</form>
 				</div>
@@ -218,12 +217,12 @@
 	    			<ul class="socialList">
 	    				<li class="cocialList__item">
 	    					<a href="#">
-	    						<img src="img/instagram.png" alt="Youtube">
+	    						<img src="img/youtube.png" alt="Instagram">
 	    					</a>
 	    				</li>	
 	    				<li class="cocialList__item">
 	    					<a href="#">
-	    						<img src="img/youtube.png" alt="Instagram">
+	    						<img src="img/instagram.png" alt="Youtube">
 	    					</a>
 	    				</li>	
 	    				<li class="cocialList__item">	

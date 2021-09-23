@@ -17,8 +17,8 @@
 .hero
 	min-height: 820px
 	display: flex
-	align-items: center
-	margin-bottom: 100px
+	// align-items: center
+	margin-bottom: 50px
 	position: relative
 	@media screen and (max-width: $lSize)
 		padding-bottom: 50px
@@ -29,12 +29,15 @@
 .hero__text 
 	display: flex
 	flex-direction: column
+	margin-top: 100px
+	@media screen and (max-width: $lSize)
+		margin-top: 10px	
 
 .hero__title
 	margin-bottom: 14px
 
 .hero__subTitle
-	margin-bottom: 40px	
+	margin-bottom: 35px	
 
 .hero__date
 	@media screen and (max-width: $lSize)
@@ -43,23 +46,31 @@
 
 .hero__img 
 	position: absolute
-	right: 0
 	z-index: -1
+	right: -32px
+	margin-top: -47px
 	@media screen and (max-width: $xlSize)
 		position: static
 	@media screen and (max-width: $lSize)
 		height: 600px
-	@media screen and (max-width: $sSize)
+	@media screen and (max-width: $mSize)
 		height: auto
+		margin-top: 80px
 
 				
 
 
 .hero__button
 	display: block
-	margin-bottom: 170px
+	//pp
+	margin-bottom: 177px
+
 	@media screen and (max-width: $lSize)
 		margin-bottom: -100px
+
+.mainNavigation__navigation
+	margin-top: 8px
+	margin-left: -20px
 
 .mainNavigation__text
 	@media screen and (max-width: $xlSize)
@@ -68,7 +79,8 @@
 .aboutWatercolor
 	display: flex
 	align-items: center
-	margin-bottom: 150px
+	justify-content: space-between
+	margin-bottom: 190px
 	@media screen and (max-width: $mSize)
 		flex-direction: column-reverse
 
@@ -76,14 +88,13 @@
 .aboutWatercolor::before
 	background-image: url("/img/aboutWatercolor.png")
 	background-repeat: no-repeat
-	background-position: center
+	background-position: -33px
 	display: block
 	height: 587px
 	width: 547px
 	content: ""
 	@media screen and (max-width: $mSize)
 		flex-direction: column-reverse
-		width: 100vh
 		transform: rotate(90deg) 
 
 .aboutWatercolor__title
@@ -91,7 +102,7 @@
 
 .aboutWatercolor__textWrap 
 	width: 50%
-	margin-right: 0
+	margin-right: -25px
 	@media screen and (max-width: $mSize)
 		width: 100%
 
@@ -100,7 +111,7 @@
 	max-width: 470px
 
 .stereotypes
-	margin-bottom: 90px
+	margin-bottom: 39px
 	position: relative
 
 .stereotypes__title
@@ -122,12 +133,18 @@
 .stereotypes__wrap::before
 	background-image: url("/img/flamingohead.png")
 	background-repeat: no-repeat
-	background-position: right
 	display: block
 	height: 628px
 	width: 291px
-	margin-top: - 120px
 	content: ""
+	position: absolute
+	left: -60px
+	top: -260px
+	@media screen and (max-width: $lSize)
+		left: -130px
+	@media screen and (max-width: $mSize)
+		display: none	
+			
 
 .stereotypes__wrap::after
 	background-image: url("/img/flamingo.png")
@@ -138,6 +155,16 @@
 	width: 286px
 	margin-top: -120px
 	content: ""
+	position: absolute
+	right: -83px
+	top: -111px
+	@media screen and (max-width: $lSize)
+		right: -130px
+	@media screen and (max-width: $mSize)
+		right: -150px
+	@media screen and (max-width: $sSize)
+		top: -10px
+		right: -220px			
 
 .stereotypes__text
 	text-align: center
@@ -145,7 +172,8 @@
 	justify-content: space-between
 
 .stereotypes__pargraph	
-	margin-bottom: 60px
+	margin-bottom: 46px
+	max-width: 600px
 	@media screen and (max-width: $sSize)
 		margin-left: auto
 		margin-right: auto
@@ -170,17 +198,19 @@
 	margin-bottom: 200px
 	background-image: url("/img/backgroundFox.png")
 	background-repeat: no-repeat
-	background-position: center top 150px
+	background-position: 9px 126px
 	background-size: auto
 	
 
 .advantages__title
 	margin-bottom: 20px
 
+.advantages__text
+	margin-bottom: 194px
 
 .advantages__wrap
 	max-width: 450px
-	margin-bottom: 200px
+	margin-bottom: 158px
 	@media screen and (max-width: $mSize)
 		margin-bottom: 100px	
 
@@ -188,6 +218,7 @@
 .advantages__wrap:nth-child(2)
 	margin-right: 0 
 	margin-left: auto
+	margin-bottom: 135px
 	@media screen and (max-width: $mSize)
 		margin-right: auto 
 		margin-left: 0
@@ -196,26 +227,25 @@
 .teachers
 	background-image: url("/img/bgWatercolorSplash.png")
 	background-repeat: no-repeat
-
 	text-align: center
-	margin-bottom: 200px
+	margin-bottom: 172px
 
 .teachers__title
 	margin-bottom: 85px	
 
 .teachers__photoContainer
-	width: 780px
+	width: 770px
 	margin: 0 auto
-	margin-bottom: 30px
+	margin-bottom: 25px
 
 
 .teachers__button	
-	margin-bottom: 90px
+	margin-bottom: 74px
 
 
 .gallery
 	text-align: center
-	margin-bottom: 150px
+	margin-bottom: 126px
 
 .gallery__title
 	margin-bottom: 56px	
@@ -228,17 +258,19 @@
 .captureForm
 	background-image: url("/img/bgGirlWatercolor.png")
 	background-repeat: no-repeat
-	background-position: right top 160px
+	background-position: right -18px top 132px
 	text-align: center
 	padding-bottom: 120px
-	margin-bottom: 170px
+	margin-bottom: 113px
 	position: relative
 	@media screen and (max-width: $xlSize)
 		background-position: right -250px top 160px	
 	@media screen and (max-width: $mSize)
 		background-position: right -250px top
-	@media screen and (max-width: $xsSize)
-		background-position: right -300px top 160px			
+	@media screen and (max-width: $sSize)	
+		background-position: right -300px top 120px
+	// @media screen and (max-width: $xsSize)
+	// 	background-position: right -300px top 160px			
 
 // .captureForm::before
 // 	background-image: url("/img/bgGirlWatercolor.png")
@@ -255,10 +287,10 @@
 		max-width: 360px
 
 .captureForm__title
-	margin-bottom: 40px
+	margin-bottom: 25px
 
 .captureForm__subTitle
-	margin-bottom: 50px
+	margin-bottom: 30px
 	@media screen and (max-width: $lSize)
 		margin-left: auto
 		margin-right: auto
@@ -270,17 +302,18 @@
 
 .tariffs 
 	text-align: center
-	margin-bottom: 120px
+	margin-bottom: 108px
 	position: relative
 	overflow-x: hidden
 
 .tariffs__title
-	margin-bottom: 65px	
+	margin-bottom: 40px	
 
 .tarriffs__wrap
 	width: 100%
 	display: flex
 	justify-content: center
+	margin-bottom: 20px
 
 .tariffs__list
 	width: 1200px
@@ -290,7 +323,7 @@
 .contacts
 	display: flex
 	justify-content: center
-	margin-bottom: 100px
+	margin-bottom: 43px
 	// @media screen and (max-width: $xlSize)
 	// 	width: auto
 	// 	// flex-direction: column
@@ -300,6 +333,7 @@
 
 .contacts__textWrap 
 	display: block
+	margin-top: 63px
 	@media screen and (max-width: $lSize)
 		display: flex
 		text-align: center
@@ -310,11 +344,11 @@
 		align-items: flex-start
 
 .contacts__title
-	margin-bottom: 25px
+	margin-bottom: 16px
 
 .contacts__text
 	width: 45%
-	margin-bottom: 5px
+	margin-bottom: 10px
 
 .contacts__text--last
 	margin-bottom: 40px	
