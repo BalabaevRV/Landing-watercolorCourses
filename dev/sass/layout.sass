@@ -345,6 +345,17 @@
 		text-align: left
 		align-items: flex-start
 
+.contacts__mapWrap
+	position: absolute
+	width: 1200px
+	z-index: -1
+	@media screen and (max-width: $lSize)
+		position: static
+		width: auto
+		overflow-x: hidden
+		display: flex
+		justify-content: center	
+
 .contacts__title
 	margin-bottom: 16px
 
