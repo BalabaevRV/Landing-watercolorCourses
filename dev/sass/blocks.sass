@@ -56,29 +56,40 @@
 
 .button
 	background: none
-	background-image: url("/img/button.png")
+	color: $blue
+	width: 224px
+	height: 69px
+	cursor: pointer
+	position: relative
+
+.button__sign
 	font-family: $laptev	
 	font-size: 30px
 	text-shadow: 0.5px 0 0
 	letter-spacing: 2px
 	color: $white
-	width: 224px
-	height: 69px
+	margin: auto
+	position: absolute
+	top: 0
+	left: 0 
+	bottom: 0
+	right: 0
+	width: 100%
 	text-align: center
-	padding-top: 18px
-	cursor: pointer
+	height: 50%
+
+.button__sign--big	
+	top: 15px
 
 .button:hover
-	background-image: url("/img/buttonHover.png")	
+	color: $hover
 
 .button:active
-	background-image: url("/img/buttonActive.png")	
+	color: $active	
 
 .button--big
-	background-image: url("/img/buttonGallery.png")	
 	width: 297px
-	height: 90px
-	padding-top: 5px
+	height: 92px
 
 .button--form
 	width: 297px
@@ -280,17 +291,22 @@
 	width: 80px
 	height: 55px
 	background: none
-	background-image: url("/img/arrow.png"), url("/img/arrowHover.png"), url("/img/arrowActive.png")
 	cursor: pointer
+	color: $blue
+	padding: 0
+
+.arrow--small
+	width: 41px
+	height: 29px
 
 .arrow:hover
-	background-image: url("/img/arrowHover.png")
+	color: $hover
 
 .arrow:active
-	background-image: url("/img/arrowActive.png")
+	color: $active
 
 .arrow--disabled
-	background-image: url("/img/arrowDisabled.png")
+	color: $disabled
 	cursor: default		
 
 
@@ -357,7 +373,7 @@
 	align-items: center
 	justify-content: space-between
 	width: 132px
-	margin-bottom: 30px
+	margin-bottom: 22px
 	@media screen and (max-width: $mSize)
 		display: none
 
@@ -421,6 +437,7 @@
 
 .form__link
 	text-decoration: underline
+	
 .tarrifsList
 	display: flex
 	justify-content: space-between
@@ -433,7 +450,7 @@
 	margin-bottom: 20px
 
 .tarrifsList__card
-	background-image: url("/img/bgTarrifs.png")	
+	background-image: url("/img/bgTarrifs.png"), url("/img/bgTarrifsHover.png"), url("/img/bgTarrifsActive.png")	
 	background-repeat: no-repeat
 	cursor: pointer
 	width: 360px
@@ -442,6 +459,21 @@
 	padding-top: 70px
 	padding-left: 100px
 	position: relative
+
+.tarrifsList__card:hover
+	background-image: url("/img/bgTarrifsHover.png")
+
+.tarrifsList__card:hover .tarrifsList__button 
+	display: block 
+	color: $hover
+
+.tarrifsList__card:active
+	background-image: url("/img/bgTarrifsActive.png")
+
+.tarrifsList__card:active .tarrifsList__button 
+	display: block 
+	color: $active	
+
 
 .tarrifsList__includeList
 	color: $white

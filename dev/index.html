@@ -34,9 +34,12 @@
     <main>
     	<section class="hero container">
     		<div class="hero__text">
-	    		<h1 class="hero__title mainTitle">Научим рисовать <br> акварелью</h1>				    		
+	    		<h1 class="hero__title mainTitle">Научим рисовать <br> акварелью</h1>				  	
 	    		<h2 class="hero__subTitle subTitle">Раскроем твой творческий <br> потенциал на все 100%</h2>
-	    		<a href="#" class="hero__button button">Записаться</a>
+	    		<a href="#" class="hero__button button">
+	    			<svg width="224" height="69">
+						<use xlink:href="/img/sprite.svg#bgButton"></use>
+					</svg><p class="button__sign">Записаться</p></a>
 	    		<h3 class="hero__date">Следующий старт 24 июня 2020</h3>
     		</div>
     		<img class="hero__img" src="img/hero.png" alt="Нарисованная акварелью девушка">
@@ -100,15 +103,28 @@
     		<h1 class="teachers__title title title--blue">Наша команда</h1>
     		<div class="teachers__photoContainer photoContainer">
     			<ul class="teachers__nav teacherSlider__nav">
-    				<li><button class="arrow" aria-label="Left click"></button></li>
-    				<li><button class="arrow arrow--right" aria-label="Right click"></button></li>
+    				<li><button class="arrow" aria-label="Left click">
+    					<svg width="80" height="55">
+							<use xlink:href="/img/sprite.svg#arrow"></use>
+						</svg>
+					</button></li>
+    				<li><button class="arrow arrow--right" aria-label="Right click">
+    					<svg width="80" height="55">
+							<use xlink:href="/img/sprite.svg#arrow"></use>
+						</svg>
+					</button></li>
     			</ul>
     			<figure class="teacherSlider__mainPhoto">
     				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
     				<figcaption class="teacherSlider__sign boldText">Литвинова Анна</figcaption>
     			</figure>
     		</div>
-    		<button class="teachers__button button button--big">Посмотреть работы</button>
+    		<button class="teachers__button button button--big">
+    			<svg width="297" height="92">
+						<use xlink:href="/img/sprite.svg#bgButton"></use>
+				</svg>
+				<p class="button__sign button__sign--big">Посмотреть работы</p>
+			</button>
     		<div class="teacherSlider__listWrap">
 				<ul class="teacherSlider__list">
 					<li class="teacherSlider__teacher"><img src="img/teachSidorovaSofia-min.jpg" alt="Преподаватель — Сидорова София" class="teacherSlider__img"></li>
@@ -131,8 +147,16 @@
 	    		</ul>
     		</div>
     		<ul class="pictureCarousel__nav">
-    			<li class="pictureCarousel__arrow arrow"><img src="img/arrow.png" alt="Left click"></li>
-    			<li class="pictureCarousel__arrow arrow--right"><img src="img/arrow.png" alt="Right click"></li>
+    				<li><button class="arrow arrow--small" aria-label="Left click">
+    					<svg width="41" height="29">
+							<use xlink:href="/img/sprite.svg#arrow"></use>
+						</svg>
+					</button></li>
+    				<li><button class="arrow arrow--small arrow--right" aria-label="Right click">
+    					<svg width="41" height="29" viewBox="0 0 41 29">
+							<use xlink:href="/img/sprite.svg#arrow"></use>
+						</svg>
+					</button></li>
     		</ul>
     		<ul class="pictureCarousel__pagination">
     			<li class="pictureCarousel__dot pictureCarousel__dot--active"></li>
@@ -141,9 +165,12 @@
 				<li class="pictureCarousel__dot"></li>
 				<li class="pictureCarousel__dot"></li>
     		</ul>
-    		<button class="button button--big">
- 				Еще работы   			
-    		</button>
+    		 <button class="button button--big">
+    			<svg width="297" height="92">
+						<use xlink:href="/img/sprite.svg#bgButton"></use>
+				</svg>
+				<p class="button__sign button__sign--big">Еще работы </p>
+			</button>
     	</section>
     	<div class="bottom__wrap">
 	    	<section class="captureForm">
@@ -154,7 +181,12 @@
 					<form>
 						<input type="tel" class="form__input" placeholder="Телефон">
 						<p class="form__text">Нажимая на кнопку, вы соглашаетесь с <a class="form__link" href="#">политикой конфиденциальности</a></p>
-						<button class="button button--big">Записаться</button>
+    		 			<button class="button button--big">
+    						<svg width="297" height="92">
+								<use xlink:href="/img/sprite.svg#bgButton"></use>
+							</svg>
+							<p class="button__sign button__sign--big">Записаться</p>
+						</button>
 					</form>
 				</div>
 	    	</section>
@@ -173,8 +205,12 @@
 	    					</ul>
 	    					<p class="tarrifsList__price">6999 ₽</p>
 	    				</dd>
-	    				<button class="button button--noPadding
-	    				tarrifsList__button">Записаться</button>
+						<button class="button tarrifsList__button">
+							<svg width="224" height="69">
+								<use xlink:href="/img/sprite.svg#bgButton"></use>
+							</svg>
+							<p class="button__sign">Записаться</p>
+						</button>	    				
 		    		</div>		
 	    			<div class="tarrifsList__card">
 		    			<dt class="tarrifsList__term">Расширенный</dt>
@@ -187,7 +223,12 @@
 	    					</ul>
 	    					<p class="tarrifsList__price">7999 ₽</p>
 	    				</dd>
-	    				<button class="button button--noPadding tarrifsList__button">Записаться</button>
+						<button class="button tarrifsList__button">
+							<svg width="224" height="69">
+								<use xlink:href="/img/sprite.svg#bgButton"></use>
+							</svg>
+							<p class="button__sign">Записаться</p>
+						</button>
 		    		</div>		
 		    		<div class="tarrifsList__card">
 		    			<dt class="tarrifsList__term">Премиум</dt>
@@ -202,7 +243,12 @@
 	    					</ul>
 	    					<p class="tarrifsList__price">9999 ₽</p>
 	    				</dd>
-	    				<button class="button button--noPadding tarrifsList__button">Записаться</button>
+						<button class="button tarrifsList__button">
+							<svg width="224" height="69">
+								<use xlink:href="/img/sprite.svg#bgButton"></use>
+							</svg>
+							<p class="button__sign">Записаться</p>
+						</button>
 		    		</div>		
 		    	</dl>
 		    	</div>		
