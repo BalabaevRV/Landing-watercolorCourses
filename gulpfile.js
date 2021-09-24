@@ -32,6 +32,7 @@ const server = () => {
 const watcher = () => {
     watch("dev/sass/*.sass", series("styles"));
     watch("dev/*.html").on("change", browserSync.reload);
+    watch("dev/scripts/*.js").on("change", browserSync.reload);
     watch("dev/css/*.css").on("change", browserSync.reload);
 }
 

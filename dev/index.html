@@ -11,34 +11,33 @@
     <link href="/css/blocks.css" rel="stylesheet">
 </head>
 <body>
-	<!-- <div class="popUp" style="display: none">
+	 <div class="popUp" style="display: none" id="popUp">
 		<div class="popUp__window">
-			<button class="popUp__close" id="closePopUp"  aria-label="close popUp">
+			<button class="popUp__close" id="closePopUpButton"  aria-label="close popUp">
 				<span></span>
 				<span></span>
 			</button>
-			<p class="popUp__paragraph">ffff</p>
+			<p class="popUp__paragraph"></p>
 			<button class="button popUp__button">
 				<svg width="180" height="50">
 					<use xlink:href="/img/sprite.svg#bgButton"></use>
 				</svg>
 				<p class="button__sign">Закрыть</p>
 			</button>
-		</div>-->
-<!-- 	<div class="popUp">
-		<div class="popUp__mobileMenu">
 		</div>
-	</div> -->
+	</div>	
     <header class="mainNavigation container">
-    	<button class="burgerMenu"  aria-label="open menu">
+    	<button class="burgerMenu" id="burgerMenu"  aria-label="open menu">
 			<span></span>
 			<span></span>
 			<span></span>
 			<span></span>
 		</button>
     	<a href="/" class="logo"></a>
-    	<nav>
-    		<ul class="mainNavigation__navigation navigationList">
+    	<nav class="mainNavigation__container" id="mainNav">
+    		<ul class="mainNavigation__navigation navigationList" id="navigationList">
+<!--     	<nav class="mainNavigation 			mainNavigation--mobileContainer">
+    		<ul class="mainNavigation__navigation  navigationList navigationList--mobile">-->
 				<li class="navigationList__item"><a href="#aboutUs" class="link">О нас</a></li>
 				<li class="navigationList__item"><a href="#gallery" class="link">Галерея</a></li>
 				<li class="navigationList__item"><a href="#teachers" class="link">Преподаватели</a></li>
@@ -137,7 +136,7 @@
     				<figcaption class="teacherSlider__sign boldText">Литвинова Анна</figcaption>
     			</figure>
     		</div>
-    		<button class="teachers__button button button--big">
+    		<button class="teachers__button button button--big" id="teachersWork">
     			<svg width="297" height="92">
 						<use xlink:href="/img/sprite.svg#bgButton"></use>
 				</svg>
@@ -319,10 +318,7 @@
     		<p class="copyright__text">© 2020 WonderArt. Все права защищены</p>		
     	</section>
     </footer>
-    <style>
-    @font-face {
-  	  	font-family: Laptiev;
-    	src: url("fonts/Laptev_Brush.woff") format("woff");
-	}	
+  	<script src="/scripts/mobileMenu.js"></script>
+  	<script src="/scripts/popUp.js"></script>
 </body>
 </html>
