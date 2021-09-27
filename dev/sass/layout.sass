@@ -242,6 +242,9 @@
 	width: 770px
 	margin: 0 auto
 	margin-bottom: 25px
+	overflow-x: hidden
+	display: flex
+	justify-content: center
 
 
 .teachers__button	
@@ -274,18 +277,7 @@
 		background-position: right -250px top
 	@media screen and (max-width: $sSize)	
 		background-position: right -300px top 120px
-	// @media screen and (max-width: $xsSize)
-	// 	background-position: right -300px top 160px			
 
-// .captureForm::before
-// 	background-image: url("/img/bgGirlWatercolor.png")
-// 	background-repeat: no-repeat
-// 	background-position: right
-// 	position: absolute
-// 	width: 1600px
-// 	left: 0
-// 	height: 575px
-// 	content: ""
 
 .captureForm__text
 	@media screen and (max-width: $mSize)	
@@ -355,6 +347,7 @@
 		overflow-x: hidden
 		display: flex
 		justify-content: center	
+		z-index: 0
 
 .contacts__title
 	margin-bottom: 16px

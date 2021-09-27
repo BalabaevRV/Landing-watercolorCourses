@@ -260,15 +260,31 @@
 	width: 112px
 	height: 96px	
 
-.photoContainer
+.teacherSlider
 	position: relative
 	@media screen and (max-width: $mSize)
 		min-height: 600px
 		width: auto
 
+.teacherSlider__viewport
+	position: relative
+	width: 380px
+	height: 507px
+	margin: 0 auto
+	left: 0
+	right: 0
+	overflow: hidden
+
 .teacherSlider__sliders
 	display: flex
-	
+	transition: .25s ease-in-out
+
+.teacherSlider__slide
+	width: 380px
+	height: 507px
+	flex-shrink: 0
+	display: flex
+
 
 .teacherSlider__nav
 	display: flex
@@ -288,6 +304,7 @@
 		left: 0
 		right: 0
 		width: 200px
+
 
 
 .teacherSlider__mainPhoto
@@ -317,8 +334,15 @@
 
 .arrow--disabled
 	color: $disabled
+	cursor: default	
+
+.arrow--disabled:hover
+	color: $disabled
 	cursor: default		
 
+.arrow--disabled:active
+	color: $disabled
+	cursor: default		
 
 .arrow--right
 	transform: rotate(180deg)	
@@ -593,7 +617,6 @@
 	width: 1200px
 	@media screen and (max-width: $lSize)
 		position: static
-		width: 100
 		width: 600px
 		height: 400px
 

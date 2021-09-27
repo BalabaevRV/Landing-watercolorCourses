@@ -21,7 +21,7 @@ function inputValidationPhone () {
 	} else {
 		showErrorInputPhone ();
 		formInputPhone.value = phonePattern;
-	}
+	};
 }
 
 function insertCorrectPhone () {
@@ -30,28 +30,28 @@ function insertCorrectPhone () {
 	let newCurrentPhone = "";
 	while (newCurrentPhone.length<2) {
 		addSymbolToCurrentPhone ();
-	}
+	};
 	newCurrentPhone = "-" + newCurrentPhone;
 	while (newCurrentPhone.length<5) {
 		addSymbolToCurrentPhone ();
-	}
+	};
 	newCurrentPhone = "-" + newCurrentPhone;
 	while (newCurrentPhone.length<9) {
 		addSymbolToCurrentPhone ();
-	}
+	};
 	newCurrentPhone = ") " + newCurrentPhone;
 	while (newCurrentPhone.length<14) {
 		addSymbolToCurrentPhone ();
-	}
+	};
 	newCurrentPhone = "+7 (" + newCurrentPhone;
 	
 	function addSymbolToCurrentPhone () {
 		let currentSymbol = "_";
 		while ((isNaN(currentSymbol) || currentSymbol == " ") && currentPhoneIndex>=0) {
 			currentSymbol = currentPhone[currentPhoneIndex--];	
-		}
+		};
 		newCurrentPhone = currentSymbol + newCurrentPhone; 
-	}	
+	};
 
 	formInputPhone.value = newCurrentPhone; 
 } 
@@ -83,7 +83,7 @@ function keydownOnInputPhone (event) {
 		if (numCurrentChar>18) {
 			event.preventDefault();
 			return;	
-		}
+		};
 		let nextElement;
 		event.preventDefault();
 		nextElement = currentValue.charAt(numCurrentChar);
@@ -91,11 +91,11 @@ function keydownOnInputPhone (event) {
 			nextElement = currentValue.charAt(++numCurrentChar);
 			if (numCurrentChar>19) {
 				return;
-			}
-		}	
+			};
+		};	
 		formInputPhone.value = currentValue.substring(0, numCurrentChar) + key +  currentValue.substring(numCurrentChar+1);	
 		setPositionInputPhone(formInputPhone, ++numCurrentChar);
-	} 
+	};
 	if (event.key == "Backspace") {
 		event.preventDefault();
 		let currentChar;
@@ -107,7 +107,7 @@ function keydownOnInputPhone (event) {
 		} while ((isNaN(currentChar) || currentChar == " ") && currentChar != "_");
 		formInputPhone.value = currentValue.substring(0, numCurrentChar) + "_" +  currentValue.substring(numCurrentChar+1);	
 		setPositionInputPhone(formInputPhone, numCurrentChar);
-		}
+		};
 
 	if (event.key == "ArrowLeft") {
 		event.preventDefault();
@@ -124,7 +124,7 @@ function focusOnInputPhone (event) {
 	event.preventDefault();
 	if (formInputPhone.value === "") {
 		formInputPhone.value = phonePattern;
-	}
+	};
 	setPositionInputPhone(event.target);
 }
 

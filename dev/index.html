@@ -11,6 +11,7 @@
     <link href="/css/blocks.css" rel="stylesheet">
 </head>
 <body>
+	<a href="slider.html">slider</a>
 	 <div class=" popUp" style="display: none" id="popUp">
 		<div class="popUp__window" id="popUpWindow">
 			<button class="popUp__close" id="closePopUpIcon"  aria-label="close popUp">
@@ -116,9 +117,9 @@
     	</section>
     	<section class="teachers" id="teachers">
     		<h1 class="teachers__title title title--blue">Наша команда</h1>
-    		<div class="teachers__photoContainer photoContainer">
+    		<div class="teachers__photoContainer teacherSlider">
     			<ul class="teachers__nav teacherSlider__nav">
-    				<li><button class="arrow" aria-label="Left click" id="teachersLeftButton">
+    				<li><button class="arrow arrow--disabled" aria-label="Left click" id="teachersLeftButton">
     					<svg width="80" height="55">
 							<use xlink:href="/img/sprite.svg#arrow"></use>
 						</svg>
@@ -129,20 +130,48 @@
 						</svg>
 					</button></li>
     			</ul>
-    			<ul class="teacherSlider__sliders">
-    				<li>
-		    			<figure class="teacherSlider__mainPhoto">
-		    				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
-		    				<figcaption class="teacherSlider__sign boldText">Литвинова Анна</figcaption>
-		    			</figure>
-    				</li>
-    				<li>
-		    			<figure class="teacherSlider__mainPhoto">
-		    				<img src="img/teachMelkinovaIrina.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
-		    				<figcaption class="teacherSlider__sign boldText">Мельникова Ирина</figcaption>
-		    			</figure>
-    				</li>    				
-    			</ul>
+    			<div>
+    			<div class="teacherSlider__viewport">
+	    			<ul class="teacherSlider__sliders" id="teachersSlider">
+	    				<li class="teacherSlider__slide">
+			    			<figure class="teacherSlider__mainPhoto">
+			    				<img src="img/teachSidorovaSofia.png" alt="Преподаватель — Сидорова София" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<figcaption class="teacherSlider__sign boldText">Сидорова София</figcaption>
+			    			</figure>
+	    				</li>     	    					    		
+	    				<li class="teacherSlider__slide">
+			    			<figure class="teacherSlider__mainPhoto">
+			    				<img src="img/teachTroitskaiMaria.png" alt="Преподаватель — Троицкая Мария" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<figcaption class="teacherSlider__sign boldText">Троицкая Мария</figcaption>
+			    			</figure>
+	    				</li>
+	    				<li class="teacherSlider__slide">
+			    			<figure class="teacherSlider__mainPhoto">
+			    				<img src="img/teachVolkovMihail.png" alt="Преподаватель — Волков Михаил" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<figcaption class="teacherSlider__sign boldText">Волков Михаил</figcaption>
+			    			</figure>
+	    				</li>      	
+	    				<li class="teacherSlider__slide">
+			    			<figure class="teacherSlider__mainPhoto">
+			    				<img src="img/teachPavlovAlexander.png" alt="Преподаватель — Павлов Александр" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<figcaption class="teacherSlider__sign boldText">Павлов Александр</figcaption>
+			    			</figure>
+	    				</li>
+	    				 <li class="teacherSlider__slide">
+			    			<figure class="teacherSlider__mainPhoto">
+			    				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<figcaption class="teacherSlider__sign boldText">Литвинова Анна</figcaption>
+			    			</figure>
+	    				</li> 
+	    				<li class="teacherSlider__slide">
+			    			<figure class="teacherSlider__mainPhoto">
+			    				<img src="img/teachMelkinovaIrina.png" alt="Преподаватель — Мельникова Ирина" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<figcaption class="teacherSlider__sign boldText">Мельникова Ирина</figcaption>
+			    			</figure>
+	    				</li>    				
+	    			</ul>
+    			</div>
+    		</div>
     		</div>
     		<button class="teachers__button button button--big" id="teachersWork">
     			<svg width="297" height="92">
@@ -151,7 +180,7 @@
 				<p class="button__sign button__sign--big">Посмотреть работы</p>
 			</button>
     		<div class="teacherSlider__listWrap">
-				<ul class="teacherSlider__list">
+				<ul class="teacherSlider__list" id="teacherSliderList">
 					<li class="teacherSlider__teacher"><img src="img/teachSidorovaSofia-min.jpg" alt="Преподаватель — Сидорова София" class="teacherSlider__img"></li>
 					<li class="teacherSlider__teacher"><img src="img/teachTroitskaiMaria-min.jpg" alt="Преподаватель — Троицкая Мария" class="teacherSlider__img"></li>   
 					<li class="teacherSlider__teacher"><img src="img/teachVolkovMihail-min.jpg" alt="Преподаватель — Волков Михаил" class="teacherSlider__img"></li>
@@ -313,12 +342,10 @@
 	    			</li>
 	    			</ul>
 	    		</div>
-	    		<div class="contacts__mapWrap map__wrap">
-	    			<div>
+	    		<div class="contacts__mapWrap">
 						<div class="map">
 		    				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.1943036809453!2d30.322759516107933!3d59.93946706165187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb495e035%3A0x8f72a23177b41dac!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDQsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1632407708108!5m2!1sru!2sru" width="600" height="400" align="right" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 		  				</div>
-	  				</div>
 				</div>						
 	    	</section>
 	    	</div>
