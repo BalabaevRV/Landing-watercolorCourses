@@ -11,14 +11,14 @@
     <link href="/css/blocks.css" rel="stylesheet">
 </head>
 <body>
-	 <div class="popUp" style="display: none" id="popUp">
-		<div class="popUp__window">
-			<button class="popUp__close" id="closePopUpButton"  aria-label="close popUp">
+	 <div class=" popUp" style="display: none" id="popUp">
+		<div class="popUp__window" id="popUpWindow">
+			<button class="popUp__close" id="closePopUpIcon"  aria-label="close popUp">
 				<span></span>
 				<span></span>
 			</button>
 			<p class="popUp__paragraph"></p>
-			<button class="button popUp__button">
+			<button class="button popUp__button" id="closePopUpButton">
 				<svg width="180" height="50">
 					<use xlink:href="/img/sprite.svg#bgButton"></use>
 				</svg>
@@ -36,12 +36,10 @@
     	<a href="/" class="logo"></a>
     	<nav class="mainNavigation__container" id="mainNav">
     		<ul class="mainNavigation__navigation navigationList" id="navigationList">
-<!--     	<nav class="mainNavigation 			mainNavigation--mobileContainer">
-    		<ul class="mainNavigation__navigation  navigationList navigationList--mobile">-->
 				<li class="navigationList__item"><a href="#aboutUs" class="link">О нас</a></li>
 				<li class="navigationList__item"><a href="#gallery" class="link">Галерея</a></li>
 				<li class="navigationList__item"><a href="#teachers" class="link">Преподаватели</a></li>
-				<li class="navigationList__item"><a href="#tarrifs" class="link">Тарифы</a></li>
+				<li class="navigationList__item"><a href="#tariffs" class="link">Тарифы</a></li>
 				<li class="navigationList__item"><a href="#contacts" class="link">Контакты</a></li>
     		</ul>
     	</nav>	
@@ -120,21 +118,31 @@
     		<h1 class="teachers__title title title--blue">Наша команда</h1>
     		<div class="teachers__photoContainer photoContainer">
     			<ul class="teachers__nav teacherSlider__nav">
-    				<li><button class="arrow" aria-label="Left click">
+    				<li><button class="arrow" aria-label="Left click" id="teachersLeftButton">
     					<svg width="80" height="55">
 							<use xlink:href="/img/sprite.svg#arrow"></use>
 						</svg>
 					</button></li>
-    				<li><button class="arrow arrow--right" aria-label="Right click">
+    				<li><button class="arrow arrow--right" aria-label="Right click" id="teachersRightButton">
     					<svg width="80" height="55">
 							<use xlink:href="/img/sprite.svg#arrow"></use>
 						</svg>
 					</button></li>
     			</ul>
-    			<figure class="teacherSlider__mainPhoto">
-    				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
-    				<figcaption class="teacherSlider__sign boldText">Литвинова Анна</figcaption>
-    			</figure>
+    			<ul class="teacherSlider__sliders">
+    				<li>
+		    			<figure class="teacherSlider__mainPhoto">
+		    				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
+		    				<figcaption class="teacherSlider__sign boldText">Литвинова Анна</figcaption>
+		    			</figure>
+    				</li>
+    				<li>
+		    			<figure class="teacherSlider__mainPhoto">
+		    				<img src="img/teachMelkinovaIrina.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
+		    				<figcaption class="teacherSlider__sign boldText">Мельникова Ирина</figcaption>
+		    			</figure>
+    				</li>    				
+    			</ul>
     		</div>
     		<button class="teachers__button button button--big" id="teachersWork">
     			<svg width="297" height="92">
@@ -182,7 +190,7 @@
 				<li class="pictureCarousel__dot"></li>
 				<li class="pictureCarousel__dot"></li>
     		</ul>
-    		 <button class="button button--big">
+    		 <button class="button button--big" id="moreWorkButton">
     			<svg width="297" height="92">
 						<use xlink:href="/img/sprite.svg#bgButton"></use>
 				</svg>
@@ -196,9 +204,12 @@
 		    		<p class="captureForm__subTitle bigSubTitle">Попробуй на бесплтаном пробном уроке</p>
 		    		<p class="captureForm__text boldText">Оставьте номер телефона и мы перезвоним вам, <br> ответим на все вопросы и запишем на пробное занятие</p>
 					<form>
-						<input type="tel" class="form__input" placeholder="Телефон">
-						<p class="form__text">Нажимая на кнопку, вы соглашаетесь с <a class="form__link link" href="#">политикой конфиденциальности</a></p>
-    		 			<button href="#captureForm" class="button button--big">
+						<div class="form__inputWrap">
+							<p class="text text--error form__textError">Укажите корректный номер телефона</p>
+							<input type="tel" class="form__input" placeholder="Телефон" id="formInputPhone" autocomplete="off">
+						</div>
+						<p class="form__text">Нажимая на кнопку, вы соглашаетесь с <a class="form__link link" href="#" id="linkPrivacyPolicy">политикой конфиденциальности</a></p>
+    		 			<button href="#captureForm" class="button button--big" id="buttonCapture">
     						<svg width="297" height="92">
 								<use xlink:href="/img/sprite.svg#bgButton"></use>
 							</svg>
@@ -320,5 +331,7 @@
     </footer>
   	<script src="/scripts/mobileMenu.js"></script>
   	<script src="/scripts/popUp.js"></script>
+  	<script src="/scripts/validationForm.js"></script>
+  	<script src="/scripts/teachersSlider.js"></script>
 </body>
 </html>

@@ -16,6 +16,10 @@
 .text
 	line-height: 1.4em
 
+.text--error
+	color: $error
+	display: none
+
 .mainNavigation
 	display: flex
 	justify-content: space-between
@@ -262,6 +266,10 @@
 		min-height: 600px
 		width: auto
 
+.teacherSlider__sliders
+	display: flex
+	
+
 .teacherSlider__nav
 	display: flex
 	width: 770px
@@ -419,6 +427,18 @@
 	@media screen and (max-width: $mSize)
 		font-size: 32px
 
+.form__inputWrap
+	position: relative
+
+.form__textError
+	position: absolute
+	top: -30px
+	left: 0 
+	right: 0
+	@media screen and (max-width: $xsSize)
+		top: -60px
+
+
 .form__input
 	border: 1px solid $black
 	border-radius: 25px
@@ -436,6 +456,9 @@
 	outline: none
 	border: 1px solid $hover
 	border-radius: 25px
+
+.form__input--error
+	border-color: $error
 
 .form__text
 	margin-bottom: 32px
@@ -579,23 +602,27 @@ iframe
 	margin-right: 0
 
 .popUp
-	background-color: rgba(0, 0, 0, 0.9)
+	transition-property: background-color
+	transition-duration: 1s
+	background-color: rgba(0, 0, 0, 0)
 	position: fixed
 	width: 100%
 	height: 100%
 	z-index: 10
 
 .popUp__window
-	position: absolute
+	transition-property: right
+	transition-duration: 1s
+	position: fixed
 	margin: auto
 	display: flex
 	align-items: center
 	justify-content: center
 	left: 0
-	right: 0
+	right: -200%
 	top: 0
 	bottom: 0 
-	max-width: 400px
+	width: 400px
 	max-height: 200px
 	z-index: 20
 	background-color: $white
