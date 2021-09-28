@@ -409,6 +409,7 @@
 .pictureCarousel
 	display: flex
 	position: absolute
+	transition: .25s ease-in-out
 	cursor: grab
 
 .pictureCarousel__item
@@ -425,8 +426,6 @@
 	justify-content: space-between
 	width: 132px
 	margin-bottom: 22px
-	@media screen and (max-width: $mSize)
-		display: none
 
 .pictureCarousel__arrow
 	width: 41px
@@ -507,6 +506,8 @@
 .tarrifsList
 	display: flex
 	justify-content: space-between
+	transition: .25s ease-in-out
+
 
 .tarrifsList__term
 	font-family: $laptev

@@ -192,31 +192,26 @@
     	<section class="gallery" id="gallery">
     		<h1 class="gallery__title title title--darkPurple">Работы учеников</h1>
     		<div class="pictureCarousel__wrap">
-	    		<ul class="pictureCarousel">
-	    			<li class="pictureCarousel__item"><img src="img/imgSlide1.jpg" alt="Картина 1"></li>	
-	    			<li class="pictureCarousel__item"><img src="img/imgSlide2.jpg" alt="Картина 1"></li>	 
-	    			<li class="pictureCarousel__item"><img src="img/imgSlide3.jpg" alt="Картина 1"></li>	
-	    			<li class="pictureCarousel__item"><img src="img/imgSlide4.jpg" alt="Картина 1"></li>	
+	    		<ul class="pictureCarousel" id="pictureCarousel">
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide1.jpg" alt="Картина реки в лесу"></li>	
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide2.jpg" alt="Картина ночной реки"></li>	 
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide3.jpg" alt="Картина лодки"></li>	
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide4.jpg" alt="Картина озера"></li>
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide5.jpg" alt="Картина лодки на воде"></li>	
+	    			<li class="pictureCarousel__item"><img src="img/imgSlide6.jpg" alt="Картина села"></li>
 	    		</ul>
     		</div>
     		<ul class="pictureCarousel__nav">
-    				<li><button class="arrow arrow--small" aria-label="Left click">
+    				<li><button class="arrow arrow--small" aria-label="Left click" id="picturesLeftButton">
     					<svg width="41" height="29">
 							<use xlink:href="/img/sprite.svg#arrow"></use>
 						</svg>
 					</button></li>
-    				<li><button class="arrow arrow--small arrow--right" aria-label="Right click">
+    				<li><button class="arrow arrow--small arrow--right" aria-label="Right click" id="picturesRightButton">
     					<svg width="41" height="29" viewBox="0 0 41 29">
 							<use xlink:href="/img/sprite.svg#arrow"></use>
 						</svg>
 					</button></li>
-    		</ul>
-    		<ul class="pictureCarousel__pagination">
-    			<li class="pictureCarousel__dot pictureCarousel__dot--active"></li>
-				<li class="pictureCarousel__dot"></li>
-				<li class="pictureCarousel__dot"></li>
-				<li class="pictureCarousel__dot"></li>
-				<li class="pictureCarousel__dot"></li>
     		</ul>
     		 <button class="button button--big" id="moreWorkButton">
     			<svg width="297" height="92">
@@ -243,16 +238,14 @@
 							</svg>
 							<p class="button__sign button__sign--big">Записаться</p>
 						</button>
-
-
 					</form>
 				</div>
 	    	</section>
 	    	<section class="tariffs" id="tariffs">
 	    		<h1 class="tariffs__title title title--darkPing">Наши тарифы</h1>	
 	    		<div class="tarriffs__wrap">
-	    		<dl class="tariffs__list tarrifsList">
-	    			<div class="tarrifsList__card">
+	    		<dl class="tariffs__list tarrifsList" id="tarriffsList">
+	    			<a href="#captureForm" class="tarrifsList__card">
 		    			<dt class="tarrifsList__term">Базовый</dt>
 	    				<dd>
 	    					<ul class="tarrifsList__includeList">
@@ -263,14 +256,14 @@
 	    					</ul>
 	    					<p class="tarrifsList__price">6999 ₽</p>
 	    				</dd>
-						<a href="#captureForm" class="button tarrifsList__button">
+						<div class="button tarrifsList__button">
 							<svg width="224" height="69">
 								<use xlink:href="/img/sprite.svg#bgButton"></use>
 							</svg>
 							<p class="button__sign">Записаться</p>
-						</a>	    				
-		    		</div>		
-	    			<div class="tarrifsList__card">
+						</div>	    				
+		    		</a>		
+	    			<a href="#captureForm" class="tarrifsList__card">
 		    			<dt class="tarrifsList__term">Расширенный</dt>
 	    				<dd>
 	    					<ul class="tarrifsList__includeList">
@@ -281,14 +274,14 @@
 	    					</ul>
 	    					<p class="tarrifsList__price">7999 ₽</p>
 	    				</dd>
-						<a href="#captureForm" class="button tarrifsList__button">
+						<div class="button tarrifsList__button">
 							<svg width="224" height="69">
 								<use xlink:href="/img/sprite.svg#bgButton"></use>
 							</svg>
 							<p class="button__sign">Записаться</p>
-						</a>
-		    		</div>		
-		    		<div class="tarrifsList__card">
+						</div>
+		    		</a>	
+		    		<a href="#captureForm" class="tarrifsList__card">
 		    			<dt class="tarrifsList__term">Премиум</dt>
 	    				<dd>
 	    					<ul class="tarrifsList__includeList">
@@ -301,13 +294,13 @@
 	    					</ul>
 	    					<p class="tarrifsList__price">9999 ₽</p>
 	    				</dd>
-						<button class="button tarrifsList__button">
+						<div class="button tarrifsList__button">
 							<svg width="224" height="69">
 								<use xlink:href="/img/sprite.svg#bgButton"></use>
 							</svg>
 							<p class="button__sign">Записаться</p>
-						</button>
-		    		</div>		
+						</div>
+		    		</a>		
 		    	</dl>
 		    	</div>		
 	    	</section>
@@ -323,17 +316,17 @@
 	    			</p>
 	    			<ul class="socialList">
 	    				<li class="cocialList__item">
-	    					<a href="#">
+	    					<a href="https://www.youtube.com/">
 	    						<img src="img/youtube.png" alt="Instagram">
 	    					</a>
 	    				</li>	
 	    				<li class="cocialList__item">
-	    					<a href="#">
+	    					<a href="https://www.instagram.com/">
 	    						<img src="img/instagram.png" alt="Youtube">
 	    					</a>
 	    				</li>	
 	    				<li class="cocialList__item">	
-	    					<a href="#">
+	    					<a href="https://www.facebook.com/">
 	    						<img src="img/fb.png" alt="facebook">
 	    					</a>
 	    				</li>	
@@ -358,6 +351,7 @@
   	<script src="/scripts/mobileMenu.js"></script>
   	<script src="/scripts/popUp.js"></script>
   	<script src="/scripts/validationForm.js"></script>
+  	<script src="/scripts/picturesSlider.js"></script>
   	<script src="/scripts/teachersSlider.js"></script>
   	<script src="/scripts/swipe.js"></script>
 </body>

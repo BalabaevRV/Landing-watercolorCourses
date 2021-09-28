@@ -9,10 +9,6 @@ let numSliders = teachersSlider.querySelectorAll("li").length-1;
 teachersLeftButton.addEventListener("click", teachersArrowClick);
 teachersRightButton.addEventListener("click", teachersArrowClick);
 teacherSliderList.addEventListener("click", teacherSliderListClick);
-teacherSliderList.addEventListener("mousedown", swipeStart);
-teacherSliderList.addEventListener("touchstart", swipeStart);
-teachersSlider.addEventListener("mousedown", swipeStart);
-teachersSlider.addEventListener("touchstart", swipeStart);
 
 function teacherSliderListClick (event) {
 	let OffsetWidth;
@@ -51,12 +47,11 @@ function teachersArrowClick (event) {
 			moveSlideByArrow("Left");
 		} else if (event.currentTarget === teachersRightButton) {
 			moveSlideByArrow("Right");
-		}	
-	}	
+		};	
+	};	
 }
 
 function moveSlideByArrow (moveDirection = "Right") {
-	let teachersSlider = document.getElementById("teachersSlider");
 	let offsetWidth; 
 	if (moveDirection === "Right") {
 		slideIndex = (slideIndex<numSliders) ? ++slideIndex : numSliders;
