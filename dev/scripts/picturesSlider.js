@@ -19,21 +19,32 @@ function picturesArrowClick () {
 }
 
 function movePictureByArrow (moveDirection = "Right") {
+	console.log("distance click: " + distanceCarouselPicture);
 	if (moveDirection === "Right") {
-		offsetWidthCarousel = offsetWidthCarousel + widthPic;
-		if (offsetWidthCarousel>maxOffsetWidthCarousel) {
-			offsetWidthCarousel = maxOffsetWidthCarousel;	
+		distanceCarouselPicture = distanceCarouselPicture - widthPic;
+		if (Math.abs(distanceCarouselPicture)>maxOffsetWidthCarousel) {
+			distanceCarouselPicture = -maxOffsetWidthCarousel;	
 		}
 	}  else if (moveDirection === "Left") {		
-		offsetWidthCarousel = offsetWidthCarousel - widthPic;
-		if (Math.abs(offsetWidthCarousel)>maxOffsetWidthCarousel) {
-			offsetWidthCarousel = -maxOffsetWidthCarousel;	
+		distanceCarouselPicture = distanceCarouselPicture + widthPic;
+		if (distanceCarouselPicture>maxOffsetWidthCarousel) {
+			distanceCarouselPicture = maxOffsetWidthCarousel;	
 		}
 	}
-	movePictures (offsetWidthCarousel);
+	movePictures (distanceCarouselPicture);
+	switchArrowsPictureCarousel (distanceCarouselPicture);
+}
+
+function switchArrowsPictureCarousel (distance) {
+	if (Math.abs(distance)>=maxOffsetWidthCarousel) {
+		(distance>0) ? picturesLeftButton.classList.add("arrow--disabled") : picturesRightButton.classList.add("arrow--disabled");  
+	} else {
+		picturesLeftButton.classList.remove("arrow--disabled");
+		picturesRightButton.classList.remove("arrow--disabled");	
+	}; 
+
 }
 
 function movePictures (offsetWidth) {
-	// pictureCarousel.style.transform = `translateX(1500px)`;
-	pictureCarousel.style.transform = `translateX(${-offsetWidth}px)`;
+	pictureCarousel.style.transform = `translateX(${offsetWidth}px)`;
 }

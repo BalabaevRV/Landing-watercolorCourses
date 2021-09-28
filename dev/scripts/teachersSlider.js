@@ -17,7 +17,7 @@ function teacherSliderListClick (event) {
 		slideIndex = getNewSlideIndex (event.target, event.target.tagName);
 		OffsetWidth = getOffsetWidth (slideIndex);
 		moveSlide(OffsetWidth);
-		toggleArrows (slideIndex);
+		toggleArrowsTeachersSlider (slideIndex);
 	};
 }
 
@@ -60,7 +60,7 @@ function moveSlideByArrow (moveDirection = "Right") {
 	}
 	offsetWidth = getOffsetWidth(slideIndex);  
 	moveSlide (offsetWidth);
-	toggleArrows (slideIndex);
+	toggleArrowsTeachersSlider (slideIndex);
 	return -offsetWidth; 
 }
 
@@ -68,7 +68,7 @@ function moveSlide (offsetWidth) {
 	teachersSlider.style.transform = `translateX(-${offsetWidth}px)`;
 }
 
-function toggleArrows (slideIndex) {
+function toggleArrowsTeachersSlider (slideIndex) {
 	if (slideIndex === 0) {
 		teachersLeftButton.classList.add("arrow--disabled");	
 	} else {

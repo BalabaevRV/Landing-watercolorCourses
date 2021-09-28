@@ -23,7 +23,7 @@ function buttonCaptureClick (event) {
 	if (typeof validationForm == "function") {
 		if (validationForm()) {
 			openPopUp(event);
-		}
+		};
 	} else {
 		openPopUp(event);	
 	}

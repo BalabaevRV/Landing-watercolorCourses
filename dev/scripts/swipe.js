@@ -40,6 +40,7 @@ function getEvent() {
   }
 
 function swipeStart (event) {
+	console.log("distanceCarouselPicture swipe start:" + distanceCarouselPicture);
 	evt = getEvent();	
 	evt.target.ondragstart = function() {
   		return false;
@@ -56,7 +57,10 @@ function swipeStart (event) {
  			break;
  		case pictureCarousel: 			
  			distance = distanceCarouselPicture; 
- 			break;			
+ 			break;	
+ 		case tarriffsList: 			
+ 			distance = distanceTarrifs; 
+ 			break;				
  		default:
  			distance = 0;		
  			break;
@@ -93,7 +97,7 @@ function setDistanceForList () {
 }
 
 function swipeEnd (event) {
-
+	console.log("distanceCarouselPicture swipe end:" + distanceCarouselPicture); 
 	let swipeDirection = "";
 	thisList.style.cursor = "";
   	document.removeEventListener("touchmove", moveAt);
@@ -109,13 +113,15 @@ function swipeEnd (event) {
 	    if (Math.abs(distance - distanceSlider) >= minDistance) {
 			swipeDirection = (distance >= distanceSlider) ? "Left" : "Right"; 
 			distanceSlider = moveSlideByArrow (swipeDirection);
+		} else {
+			thisList.style.transform ="translateX(" + distanceSlider + "px)";			
 		};
 	} else if (thisList === tarriffsList) {
 		if (Math.abs(distance)>=minDistance && thisList.offsetWidth>window.innerWidth) {
 			isSwipe = true;
-			(distance>0) ? swipeTarrifs ("Right") : swipeTarrifs ("Left");
+			(distance>distanceTarrifs) ? swipeTarrifs ("Left") : swipeTarrifs ("Right");
 		} else {
-			thisList.style.transform = "translateX(0px)";	
+			thisList.style.transform = "translateX(" + distanceTarrifs + "px)";	
 		};
 	} else {
 		let maxOffsetWidth = getMaxOffsetWidth();
@@ -124,6 +130,7 @@ function swipeEnd (event) {
 			thisList.style.transform ="translateX(" + distance + "px)";	
 		};
 		distanceCarouselPicture = distance; 
+		switchArrowsPictureCarousel (distanceCarouselPicture);
 	};
 }    
 
@@ -133,9 +140,9 @@ function getMaxOffsetWidth () {
 
 function swipeTarrifs (swipeDirection) {
 	let widthCard = getWidthCard ();
-	widthCard = (swipeDirection === "Right") ? widthCard : -widthCard;
+	widthCard = (swipeDirection === "Right") ? -widthCard : widthCard;
 	distanceTarrifs = distanceTarrifs + widthCard; 
-	distanceTarrifs = (Math.abs(distanceTarrifs)>widthCard) ? widthCard : distanceTarrifs;
+	distanceTarrifs = (Math.abs(distanceTarrifs)>Math.abs(widthCard)) ? widthCard : distanceTarrifs;
 	thisList.style.transform = "translateX(" + distanceTarrifs + "px)";
 
 }
