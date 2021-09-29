@@ -2,8 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Курс по акварельной живописи</title>
     <link href="/css/reset.css" rel="stylesheet">
@@ -22,7 +21,7 @@
 				<svg width="180" height="50">
 					<use xlink:href="/img/sprite.svg#bgButton"></use>
 				</svg>
-				<p class="button__sign">Закрыть</p>
+				<span class="button__sign">Закрыть</span>
 			</button>
 		</div>
 	</div>	
@@ -43,7 +42,7 @@
 				<li class="navigationList__item"><a href="#contacts" class="link">Контакты</a></li>
     		</ul>
     	</nav>	
-    	<adress class="mainNavigation__text">г. Санкт-Петербург, Большая Конюшенная 4</adress>
+    	<p class="mainNavigation__text">г. Санкт-Петербург, Большая Конюшенная 4</p>
     	<a href="tel:+89524568232" class="mainNavigation__text link">тел. 8 (952) 456-82-32</a>
     </header>
     <main>
@@ -54,27 +53,28 @@
 	    		<a href="#captureForm" class="hero__button button">
 	    			<svg width="224" height="69">
 						<use xlink:href="/img/sprite.svg#bgButton"></use>
-					</svg><p class="button__sign">Записаться</p></a>
+					</svg><span class="button__sign">Записаться</span></a>
 	    		<h3 class="hero__date">Следующий старт 24 июня 2020</h3>
     		</div>
     		<img class="hero__img" src="img/hero.png" alt="Нарисованная акварелью девушка">
     	</section>
     	<section class="aboutWatercolor container">
-    		<div class="aboutWatercolor__textWrap">
-    			<h1 class="aboutWatercolor__title title title--purple">Самая легкая и воздушная</h1>
-    			<article class="aboutWatercolor__text text">
-    			Акварель — это интересный воздушный материал. С помощью акварели можно создавать удивительно легкие и в то же время глубоки картины. 
-    			<br><br>
-				Рисованию акварелью — это волшебный процесс 
-				и удивительный результат, если перестать бояться 
-				и научиться им пользоваться.
-				<br><br>	
-				Сделать это вы сможете на нашем курсе!
+    		<h2 class="hidden">Об акварели</h2>
+    		<article class="aboutWatercolor__textWrap">
+    			<h3 class="aboutWatercolor__title title title--purple">Самая легкая и воздушная</h3>
+    			<div class="aboutWatercolor__text text">
+	    			Акварель — это интересный воздушный материал. С помощью акварели можно создавать удивительно легкие и в то же время глубоки картины. 
+	    			<br><br>
+					Рисованию акварелью — это волшебный процесс 
+					и удивительный результат, если перестать бояться 
+					и научиться им пользоваться.
+					<br><br>	
+					Сделать это вы сможете на нашем курсе!
+    			</div>
     		</article>
-    		</div>
     	</section>
     	<section class="stereotypes">
-    		<h1 class="stereotypes__title title title--pink">Ломаем стереотипы</h1>
+    		<h2 class="stereotypes__title title title--pink">Ломаем стереотипы</h2>
     		<div class="stereotypes__flexWrap">
 	    		<div class="stereotypes__wrap">
 					<div class="stereotypes__text">
@@ -91,21 +91,21 @@
     	</section>
     	<section class="advantages" id="aboutUs">
     		<div class="advantages__text container">
-	    		<h1 class="advantages__title title title--orange">С нами тебя ждет</h1>
-	    		<dl class="advantages__list">
-	    			<div class="advantages__wrap">
-						<dt class="advantagesList__term">Индивидуальный подход</dt>
-						<dd class="text">Наши преподаватели опытные художники, умеющие найти подход к каждому ученику. Нами была разработана уникальная методика, по которой может научиться рисовать любой взрослый человек, даже если он никогда не брал кисть в руки</dd>
-	    			</div>
-	    			<div class="advantages__wrap">
-						<dt class="advantagesList__term">Волшебная атмосфера</dt>
-						<dd class="text">Позитивная и уютная атмосфера способствует лучшему пониманию материала. На занятиях всегда весело и интересно. В доступе кофе, чай и печенюшки. В нашем пространстве царит волшебная атмосфера, в которой люди открывают себя по новой, раскрепощаясь не только в рисунке, но и в общении!</dd>
-	    			</div>
-	    			<div class="advantages__wrap">
-						<dt class="advantagesList__term">Качественные материалы</dt>
-						<dd class="text">Материалы, при рисовании акварелью, имеют большое значение. Порой хорошо подобранная бумага очень сильно влияет на конечный результат. Важно чтобы в составе бумаге содержался хлопок. Мы сразу даем ученикам качественные материалы. Так как это один из элементов успеха</dd>
-	    			</div>
-	    		</dl>
+	    		<h2 class="advantages__title title title--orange">С нами тебя ждет</h2>
+	    		<ul class="advantages__list">
+	    			<li class="advantages__wrap">
+						<h3 class="advantagesList__term">Индивидуальный подход</h3>
+						<p class="text">Наши преподаватели опытные художники, умеющие найти подход к каждому ученику. Нами была разработана уникальная методика, по которой может научиться рисовать любой взрослый человек, даже если он никогда не брал кисть в руки</p>
+	    			</li>
+	    			<li class="advantages__wrap">
+						<h3 class="advantagesList__term">Волшебная атмосфера</h3>
+						<p class="text">Позитивная и уютная атмосфера способствует лучшему пониманию материала. На занятиях всегда весело и интересно. В доступе кофе, чай и печенюшки. В нашем пространстве царит волшебная атмосфера, в которой люди открывают себя по новой, раскрепощаясь не только в рисунке, но и в общении!</p>
+	    			</li>
+	    			<li class="advantages__wrap">
+						<h3 class="advantagesList__term">Качественные материалы</h3>
+						<p class="text">Материалы, при рисовании акварелью, имеют большое значение. Порой хорошо подобранная бумага очень сильно влияет на конечный результат. Важно чтобы в составе бумаге содержался хлопок. Мы сразу даем ученикам качественные материалы. Так как это один из элементов успеха</p>
+	    			</li>
+	    		</ul>
     		</div>
 			<ul class="advantages__listIcons advantagesList container">
 				<li class="advantagesList__item advantagesList__item--time">Занятие длится 90 мин. Вы можете выбрать удобное для себя расписание</li>
@@ -115,7 +115,7 @@
 			</ul>
     	</section>
     	<section class="teachers" id="teachers">
-    		<h1 class="teachers__title title title--blue">Наша команда</h1>
+    		<h2 class="teachers__title title title--blue">Наша команда</h2>
     		<div class="teachers__photoContainer teacherSlider">
     			<ul class="teachers__nav teacherSlider__nav">
     				<li><button class="arrow arrow--disabled" aria-label="Left click" id="teachersLeftButton">
@@ -134,37 +134,37 @@
 	    			<ul class="teacherSlider__sliders" id="teachersSlider">
 	    				<li class="teacherSlider__slide">
 			    			<figure class="teacherSlider__mainPhoto">
-			    				<img src="img/teachSidorovaSofia.png" alt="Преподаватель — Сидорова София" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<img src="img/teachSidorovaSofia.png" alt="Преподаватель — Сидорова София" width="380" height="500" class="teacherSlider__currentPhoto">
 			    				<figcaption class="teacherSlider__sign boldText">Сидорова София</figcaption>
 			    			</figure>
 	    				</li>     	    					    		
 	    				<li class="teacherSlider__slide">
 			    			<figure class="teacherSlider__mainPhoto">
-			    				<img src="img/teachTroitskaiMaria.png" alt="Преподаватель — Троицкая Мария" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<img src="img/teachTroitskaiMaria.png" alt="Преподаватель — Троицкая Мария" width="380" height="500" class="teacherSlider__currentPhoto">
 			    				<figcaption class="teacherSlider__sign boldText">Троицкая Мария</figcaption>
 			    			</figure>
 	    				</li>
 	    				<li class="teacherSlider__slide">
 			    			<figure class="teacherSlider__mainPhoto">
-			    				<img src="img/teachVolkovMihail.png" alt="Преподаватель — Волков Михаил" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<img src="img/teachVolkovMihail.png" alt="Преподаватель — Волков Михаил" width="380" height="500" class="teacherSlider__currentPhoto">
 			    				<figcaption class="teacherSlider__sign boldText">Волков Михаил</figcaption>
 			    			</figure>
 	    				</li>      	
 	    				<li class="teacherSlider__slide">
 			    			<figure class="teacherSlider__mainPhoto">
-			    				<img src="img/teachPavlovAlexander.png" alt="Преподаватель — Павлов Александр" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<img src="img/teachPavlovAlexander.png" alt="Преподаватель — Павлов Александр" width="380" height="500" class="teacherSlider__currentPhoto">
 			    				<figcaption class="teacherSlider__sign boldText">Павлов Александр</figcaption>
 			    			</figure>
 	    				</li>
 	    				 <li class="teacherSlider__slide">
 			    			<figure class="teacherSlider__mainPhoto">
-			    				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<img src="img/teachLitvinovaAnna.png" alt="Преподаватель — Литвинова Анна" width="380" height="500" class="teacherSlider__currentPhoto">
 			    				<figcaption class="teacherSlider__sign boldText">Литвинова Анна</figcaption>
 			    			</figure>
 	    				</li> 
 	    				<li class="teacherSlider__slide">
 			    			<figure class="teacherSlider__mainPhoto">
-			    				<img src="img/teachMelkinovaIrina.png" alt="Преподаватель — Мельникова Ирина" width="380px" height="500px" class="teacherSlider__currentPhoto">
+			    				<img src="img/teachMelkinovaIrina.png" alt="Преподаватель — Мельникова Ирина" width="380" height="500" class="teacherSlider__currentPhoto">
 			    				<figcaption class="teacherSlider__sign boldText">Мельникова Ирина</figcaption>
 			    			</figure>
 	    				</li> 
@@ -176,7 +176,7 @@
     			<svg width="297" height="92">
 						<use xlink:href="/img/sprite.svg#bgButton"></use>
 				</svg>
-				<p class="button__sign button__sign--big">Посмотреть работы</p>
+				<span class="button__sign button__sign--big">Посмотреть работы</span>
 			</button>
     		<div class="teacherSlider__listWrap">
 				<ul class="teacherSlider__list" id="teacherSliderList">
@@ -190,7 +190,7 @@
     		</div>
     	</section>
     	<section class="gallery" id="gallery">
-    		<h1 class="gallery__title title title--darkPurple">Работы учеников</h1>
+    		<h2 class="gallery__title title title--darkPurple">Работы учеников</h2>
     		<div class="pictureCarousel__wrap">
 	    		<ul class="pictureCarousel" id="pictureCarousel">
 	    			<li class="pictureCarousel__item"><img src="img/imgSlide1.jpg" alt="Картина реки в лесу"></li>	
@@ -217,13 +217,13 @@
     			<svg width="297" height="92">
 						<use xlink:href="/img/sprite.svg#bgButton"></use>
 				</svg>
-				<p class="button__sign button__sign--big">Еще работы </p>
+				<span class="button__sign button__sign--big">Еще работы </span>
 			</button>
     	</section>
     	<div class="bottom__wrap">
 	    	<section class="captureForm" id="captureForm">
 	    		<div class="captureForm__text container">
-		    		<h1 class="captureForm__title bigTitle">Ты сможешь рисовать, <br> даже если никогда не брал кисть в руки!</h1>	
+		    		<h2 class="captureForm__title bigTitle">Ты сможешь рисовать, <br> даже если никогда не брал кисть в руки!</h2>	
 		    		<p class="captureForm__subTitle bigSubTitle">Попробуй на бесплтаном пробном уроке</p>
 		    		<p class="captureForm__text boldText">Оставьте номер телефона и мы перезвоним вам, <br> ответим на все вопросы и запишем на пробное занятие</p>
 					<form>
@@ -232,115 +232,106 @@
 							<input type="tel" class="form__input" placeholder="Телефон" id="formInputPhone" autocomplete="off">
 						</div>
 						<p class="form__text">Нажимая на кнопку, вы соглашаетесь с <a class="form__link link" href="#" id="linkPrivacyPolicy">политикой конфиденциальности</a></p>
-    		 			<button href="#captureForm" class="button button--big" id="buttonCapture">
+    		 			<button class="button button--big" id="buttonCapture">
     						<svg width="297" height="92">
 								<use xlink:href="/img/sprite.svg#bgButton"></use>
 							</svg>
-							<p class="button__sign button__sign--big">Записаться</p>
+							<span class="button__sign button__sign--big">Записаться</span>
 						</button>
 					</form>
 				</div>
 	    	</section>
 	    	<section class="tariffs" id="tariffs">
-	    		<h1 class="tariffs__title title title--darkPing">Наши тарифы</h1>	
+	    		<h2 class="tariffs__title title title--darkPing">Наши тарифы</h2>	
 	    		<div class="tarriffs__wrap">
-	    		<dl class="tariffs__list tarrifsList" id="tarriffsList">
-	    			<a href="#captureForm" class="tarrifsList__card">
-		    			<dt class="tarrifsList__term">Базовый</dt>
-	    				<dd>
+	    			<div class="tariffs__list tarrifsList" id="tarriffsList">
+	    				<a href="#captureForm" class="tarrifsList__card">
+		    				<h3 class="tarrifsList__term">Базовый</h3>
 	    					<ul class="tarrifsList__includeList">
 	    						<li class="tarrifsList__include">2 месяца занятий</li>
 	    						<li class="tarrifsList__include">2 занятия в неделю</li>
 	    						<li class="tarrifsList__include">Разбор работ</li>
 	    						<li class="tarrifsList__include">Материалы</li>
 	    					</ul>
-	    					<p class="tarrifsList__price">6999 ₽</p>
-	    				</dd>
-						<div class="button tarrifsList__button">
-							<svg width="224" height="69">
-								<use xlink:href="/img/sprite.svg#bgButton"></use>
-							</svg>
-							<p class="button__sign">Записаться</p>
-						</div>	    				
-		    		</a>		
-	    			<a href="#captureForm" class="tarrifsList__card">
-		    			<dt class="tarrifsList__term">Расширенный</dt>
-	    				<dd>
-	    					<ul class="tarrifsList__includeList">
-	    						<li class="tarrifsList__include">3 месяца занятий</li>
-	    						<li class="tarrifsList__include">2 занятия в неделю</li>
-	    						<li class="tarrifsList__include">Разбор работ</li>
-	    						<li class="tarrifsList__include">Материалы</li>
-	    					</ul>
-	    					<p class="tarrifsList__price">7999 ₽</p>
-	    				</dd>
-						<div class="button tarrifsList__button">
-							<svg width="224" height="69">
-								<use xlink:href="/img/sprite.svg#bgButton"></use>
-							</svg>
-							<p class="button__sign">Записаться</p>
-						</div>
-		    		</a>	
-		    		<a href="#captureForm" class="tarrifsList__card">
-		    			<dt class="tarrifsList__term">Премиум</dt>
-	    				<dd>
-	    					<ul class="tarrifsList__includeList">
-	    						<li class="tarrifsList__include">3 месяца занятий</li>
-	    						<li class="tarrifsList__include">3 занятия в неделю</li>
-	    						<li class="tarrifsList__include">Разбор работ</li>
-	    						<li class="tarrifsList__include">Материалы</li>
-	    						<li class="tarrifsList__include">Выезд на пленер</li>
-	    						<li class="tarrifsList__include">4 видео-урока</li>
-	    					</ul>
-	    					<p class="tarrifsList__price">9999 ₽</p>
-	    				</dd>
-						<div class="button tarrifsList__button">
-							<svg width="224" height="69">
-								<use xlink:href="/img/sprite.svg#bgButton"></use>
-							</svg>
-							<p class="button__sign">Записаться</p>
-						</div>
-		    		</a>		
-		    	</dl>
+    						<p class="tarrifsList__price">6999 ₽</p>
+							<div class="button tarrifsList__button">
+								<svg width="224" height="69">
+									<use xlink:href="/img/sprite.svg#bgButton"></use>
+								</svg>
+								<span class="button__sign">Записаться</span>
+							</div>	    				
+		    			</a>		
+	    				<a href="#captureForm" class="tarrifsList__card">
+		    				<h3 class="tarrifsList__term">Расширенный</h3>
+    						<ul class="tarrifsList__includeList">
+    							<li class="tarrifsList__include">3 месяца занятий</li>
+    							<li class="tarrifsList__include">2 занятия в неделю</li>
+    							<li class="tarrifsList__include">Разбор работ</li>
+    							<li class="tarrifsList__include">Материалы</li>
+    						</ul>
+    						<p class="tarrifsList__price">7999 ₽</p>
+							<div class="button tarrifsList__button">
+								<svg width="224" height="69">
+									<use xlink:href="/img/sprite.svg#bgButton"></use>
+								</svg>
+								<span class="button__sign">Записаться</span>
+							</div>
+		    			</a>	
+		    			<a href="#captureForm" class="tarrifsList__card">
+		    				<h3 class="tarrifsList__term">Премиум</h3>
+    						<ul class="tarrifsList__includeList">
+    							<li class="tarrifsList__include">3 месяца занятий</li>
+    							<li class="tarrifsList__include">3 занятия в неделю</li>
+    							<li class="tarrifsList__include">Разбор работ</li>
+    							<li class="tarrifsList__include">Материалы</li>
+    							<li class="tarrifsList__include">Выезд на пленер</li>
+    							<li class="tarrifsList__include">4 видео-урока</li>
+    						</ul>
+    						<p class="tarrifsList__price">9999 ₽</p>
+							<div class="button tarrifsList__button">
+								<svg width="224" height="69">
+									<use xlink:href="/img/sprite.svg#bgButton"></use>
+								</svg>
+								<span class="button__sign">Записаться</span>
+							</div>
+		    			</a>		
+		    		</div>
 		    	</div>		
 	    	</section>
 	    	<section class="contacts" id="contacts">
 	    		<div class="contacts__textWrap container">
-	    			<h1 class="contacts__title title title--black">Контакты</h1>
+	    			<h2 class="contacts__title title title--black">Контакты</h2>
 	    			<address class="contacts__text">г. Россия, 195271 Санкт-Петербург, Большая Конюшенная 4</address>
 	    			<p class="contacts__text">
-	    				<a class="link" href="tel:+89524568232">тел. 8 (952) 456-82-32</a></p>
-	    			<p/>	
+	    				<a class="contacts__link link" href="tel:+89524568232">тел. 8 (952) 456-82-32</a>
+	    			</p>	
 	    			<p class="contacts__text contacts__text--last">
-	    				<a class="link" href="mailto:WonderArt@gmail.com">e-mail WonderArt@gmail.com</a>
+	    				<a class="contacts__link link" href="mailto:WonderArt@gmail.com">e-mail: WonderArt@gmail.com</a>
 	    			</p>
 	    			<ul class="socialList">
-	    				<li class="cocialList__item">
+	    				<li class="socialList__item">
 	    					<a href="https://www.youtube.com/">
 	    						<img src="img/youtube.png" alt="Instagram">
 	    					</a>
 	    				</li>	
-	    				<li class="cocialList__item">
+	    				<li class="socialList__item">
 	    					<a href="https://www.instagram.com/">
 	    						<img src="img/instagram.png" alt="Youtube">
 	    					</a>
 	    				</li>	
-	    				<li class="cocialList__item">	
+	    				<li class="socialList__item">	
 	    					<a href="https://www.facebook.com/">
 	    						<img src="img/fb.png" alt="facebook">
 	    					</a>
 	    				</li>	
-	    			</li>
-	    			</li>
 	    			</ul>
 	    		</div>
 	    		<div class="contacts__mapWrap">
 						<div class="map">
-		    				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.1943036809453!2d30.322759516107933!3d59.93946706165187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb495e035%3A0x8f72a23177b41dac!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDQsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1632407708108!5m2!1sru!2sru" width="600" height="400" align="right" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		    				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.1943036809453!2d30.322759516107933!3d59.93946706165187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb495e035%3A0x8f72a23177b41dac!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDQsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1632407708108!5m2!1sru!2sru" width="600" height="400"  style="border:0; margin-left: auto; display: flex" allowfullscreen="" loading="lazy"></iframe>
 		  				</div>
 				</div>						
 	    	</section>
-	    	</div>
     	</div>
     </main>
     <footer>

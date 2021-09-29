@@ -117,6 +117,7 @@
 .stereotypes
 	margin-bottom: 39px
 	position: relative
+	overflow-x: hidden
 
 .stereotypes__title
 	display: block
@@ -340,14 +341,12 @@
 .contacts__mapWrap
 	position: absolute
 	width: 1200px
-	z-index: -1
 	@media screen and (max-width: $lSize)
 		position: static
 		width: auto
 		overflow-x: hidden
 		display: flex
 		justify-content: center	
-		z-index: 0
 
 .contacts__title
 	margin-bottom: 16px
@@ -358,6 +357,10 @@
 
 .contacts__text--last
 	margin-bottom: 40px	
+
+.contacts__link
+	z-index: 1
+	position: relative
 
 .copyright
 	position: relative

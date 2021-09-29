@@ -20,6 +20,7 @@ popUp.addEventListener("transitionend", endClosePopUp);
 moreWorkButton.addEventListener("click", openPopUp);
 
 function buttonCaptureClick (event) {
+	event.preventDefault();
 	if (typeof validationForm == "function") {
 		if (validationForm()) {
 			openPopUp(event);

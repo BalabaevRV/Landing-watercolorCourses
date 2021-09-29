@@ -25,20 +25,6 @@ tarriffsList.addEventListener("mousedown", swipeStart);
 tarriffsList.addEventListener("touchstart", swipeStart);
 tarriffsList.addEventListener("click", tarriffsListclick);
 
-function tarriffsListclick () {
-	if (isSwipe) {
-		event.preventDefault();
-	}
-}
-
-function getMaxDistance () {
-	return teacherSliderList.offsetWidth;
-}
-
-function getEvent() {
-	return (event.type.search("touch") !== -1) ? event.touches[0] : event;
-  }
-
 function swipeStart (event) {
 	console.log("distanceCarouselPicture swipe start:" + distanceCarouselPicture);
 	evt = getEvent();	
@@ -48,6 +34,15 @@ function swipeStart (event) {
 	isSwipe = false;
 	thisList = event.currentTarget;
 	thisList.style.cursor = "grabbing";
+	setCurrentDistance();
+  	posX1 = evt.clientX;
+  	document.addEventListener("touchmove", moveAt);
+  	document.addEventListener("touchend", swipeEnd);
+  	document.addEventListener("mousemove", moveAt);
+  	document.addEventListener("mouseup", swipeEnd); 
+}
+
+function setCurrentDistance () {
  	switch (thisList) {
  		case teacherSliderList:
  			distance = distanceList; 
@@ -60,26 +55,32 @@ function swipeStart (event) {
  			break;	
  		case tarriffsList: 			
  			distance = distanceTarrifs; 
+ 			maxDistance = getMaxDistance ();
  			break;				
  		default:
  			distance = 0;		
  			break;
  	};
-
-  	posX1 = evt.clientX;
-  	maxDistance = getMaxDistance ();
-  	document.addEventListener("touchmove", moveAt);
-  	document.addEventListener("touchend", swipeEnd);
-  	document.addEventListener("mousemove", moveAt);
-  	document.addEventListener("mouseup", swipeEnd); 
 }
+
+
+function getMaxDistance () {
+	return thisList.offsetWidth;
+}
+
+function getMaxOffsetPictureCarousel () {
+	return (thisList.offsetWidth-window.innerWidth)/2;	
+}
+
+function getEvent() {
+	return (event.type.search("touch") !== -1) ? event.touches[0] : event;
+  }
 
 function moveAt() {
 	evt = getEvent();
 	posX2 = evt.clientX - posX1;
   	posX1 = evt.clientX;
   	(thisList === teacherSliderList) ? setDistanceForList () : setDistance();  
-
 	thisList.style.transform ="translateX(" + distance + "px)";
 }
 
@@ -97,46 +98,58 @@ function setDistanceForList () {
 }
 
 function swipeEnd (event) {
-	console.log("distanceCarouselPicture swipe end:" + distanceCarouselPicture); 
-	let swipeDirection = "";
 	thisList.style.cursor = "";
   	document.removeEventListener("touchmove", moveAt);
     document.removeEventListener("mousemove", moveAt);
     document.removeEventListener("touchend", swipeEnd);
     document.removeEventListener("mouseup", swipeEnd); 
+
 	if (thisList === teacherSliderList) {
-		if (Math.abs(distance) > minDistance) {
-			isSwipe = true;
-		};	
-		distanceList = distance;
+		swipeEndTeacherSliderList ();
 	} else if (thisList === teachersSlider) {
-	    if (Math.abs(distance - distanceSlider) >= minDistance) {
-			swipeDirection = (distance >= distanceSlider) ? "Left" : "Right"; 
-			distanceSlider = moveSlideByArrow (swipeDirection);
-		} else {
-			thisList.style.transform ="translateX(" + distanceSlider + "px)";			
-		};
+		swipeEndTeachersSlider ();	  
 	} else if (thisList === tarriffsList) {
-		if (Math.abs(distance)>=minDistance && thisList.offsetWidth>window.innerWidth) {
-			isSwipe = true;
-			(distance>distanceTarrifs) ? swipeTarrifs ("Left") : swipeTarrifs ("Right");
-		} else {
-			thisList.style.transform = "translateX(" + distanceTarrifs + "px)";	
-		};
+		swipeEndTarriffsList ();		
 	} else {
-		let maxOffsetWidth = getMaxOffsetWidth();
-		if (Math.abs(distance)>maxOffsetWidth) {
-			distance = (distance>0) ? maxOffsetWidth : -maxOffsetWidth; 
-			thisList.style.transform ="translateX(" + distance + "px)";	
-		};
-		distanceCarouselPicture = distance; 
-		switchArrowsPictureCarousel (distanceCarouselPicture);
+		swipeEndPictureCarousel ();
 	};
 }    
 
-function getMaxOffsetWidth () {
-	return (thisList.offsetWidth-window.innerWidth)/2;	
+function swipeEndTeacherSliderList () {
+	if (Math.abs(distance) > minDistance) {
+		isSwipe = true;
+	};	
+	distanceList = distance;
 }
+
+function swipeEndTeachersSlider () {
+	if (Math.abs(distance - distanceSlider) >= minDistance) {
+		let	swipeDirection = (distance >= distanceSlider) ? "Left" : "Right"; 
+		distanceSlider = moveSlideByArrow (swipeDirection);
+	} else {
+		thisList.style.transform ="translateX(" + distanceSlider + "px)";			
+	};
+}
+
+function swipeEndTarriffsList () {
+	if (Math.abs(distance)>=minDistance && thisList.offsetWidth>window.innerWidth) {
+		isSwipe = true;
+		(distance>distanceTarrifs) ? swipeTarrifs ("Left") : swipeTarrifs ("Right");
+	} else {
+		thisList.style.transform = "translateX(" + distanceTarrifs + "px)";	
+	};
+}
+
+function swipeEndPictureCarousel () {
+	let maxOffsetWidth = getMaxOffsetPictureCarousel ();
+	if (Math.abs(distance)>maxOffsetWidth) {
+		distance = (distance>0) ? maxOffsetWidth : -maxOffsetWidth; 
+		thisList.style.transform ="translateX(" + distance + "px)";	
+	};
+	distanceCarouselPicture = distance; 
+	switchArrowsPictureCarousel (distanceCarouselPicture);
+}
+
 
 function swipeTarrifs (swipeDirection) {
 	let widthCard = getWidthCard ();
@@ -149,4 +162,10 @@ function swipeTarrifs (swipeDirection) {
 
 function getWidthCard () {
 	return thisList.querySelector(".tarrifsList__card").offsetWidth;
+}
+
+function tarriffsListclick () {
+	if (isSwipe) {
+		event.preventDefault();
+	}
 }

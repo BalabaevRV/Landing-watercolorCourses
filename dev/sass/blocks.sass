@@ -4,6 +4,9 @@
 	font-family: "laptevBrush"
 	src: local("Laptev Brush"), url("/fonts/Laptev_Brush.woff") format("woff")
 
+.hidden 
+	display : none
+
 .logo
 	display: block
 	background-image: url("/img/logo.png")
@@ -567,10 +570,11 @@
 .socialList
 	display: flex	
 
-.cocialList__item
+.socialList__item
 	margin-right: 10px	
+	z-index: 1
 
-.cocialList__item:last-child
+.socialList__item:last-child
 	margin-right: 0		
 
 .burgerMenu

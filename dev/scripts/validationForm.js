@@ -132,3 +132,11 @@ function setPositionInputPhone (inputField, indexPosition = 5) {
 	inputField.setSelectionRange(indexPosition, indexPosition);	
 }
  
+
+function validationForm () {
+	if (regSample.test(formInputPhone.value)) {
+		return true;
+	} 
+		showErrorInputPhone();
+		return false;
+}
