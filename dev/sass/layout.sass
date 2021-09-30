@@ -14,17 +14,22 @@
 	@media screen and (max-width: $xsSize)
 		width: 320px				
 
+.hero__wrap 
+	width: 100%
+	overflow-x: hidden
+	padding-top: 117px
+
 .hero
 	min-height: 820px
 	display: flex
-	// align-items: center
 	margin-bottom: 50px
 	position: relative
 	@media screen and (max-width: $lSize)
 		padding-bottom: 50px
 		min-height: 600px
 	@media screen and (max-width: $sSize)
-		flex-direction: column	
+		flex-direction: column
+		margin-bottom: 120px	
 
 .hero__text 
 	display: flex
@@ -39,9 +44,17 @@
 .hero__subTitle
 	margin-bottom: 35px	
 
+.hero__subTitle br 
+	display: auto
+	@media screen and (max-width: $xlSize)
+		display: none
+
+
 .hero__date
-	@media screen and (max-width: $lSize)
+	@media screen and (max-width: $lSize)	
 		position: absolute	
+		bottom: 60px
+	@media screen and (max-width: $sSize)		
 		bottom: 0
 
 .hero__img 
@@ -49,23 +62,26 @@
 	z-index: -1
 	right: -32px
 	margin-top: -47px
+	max-height: 812px
 	@media screen and (max-width: $xlSize)
 		position: static
 	@media screen and (max-width: $lSize)
 		height: 600px
 	@media screen and (max-width: $mSize)
 		height: auto
-		margin-top: 80px
+		margin-top: -60px
+	@media screen and (max-width: $sSize)
+		margin-top: 60px	
 
 				
 
 
 .hero__button
 	display: block
-	//pp
 	margin-bottom: 177px
-
-	@media screen and (max-width: $lSize)
+	@media screen and (max-width: $xlSize)
+		margin-bottom: 50px
+	@media screen and (max-width: $mSize)
 		margin-bottom: -100px
 
 .mainNavigation
@@ -80,44 +96,90 @@
 	@media screen and (max-width: $xlSize)
 		display: none	
 
+.aboutWatercolor__wrap
+	width: 100%
+	min-height: 587px
+	overflow-x: hidden
+
 .aboutWatercolor
 	display: flex
 	align-items: center
 	justify-content: space-between
-	margin-bottom: 190px
-	@media screen and (max-width: $mSize)
+	margin-bottom: 140px
+	min-height: 587px
+	position: relative
+	@media screen and (max-width: $xlSize)
+		overflow-x: hidden
+	@media screen and (max-width: $lSize)
+		overflow-x: visible
 		flex-direction: column-reverse
+		min-height: auto
+		margin-bottom: 70px
+	@media screen and (max-width: $sSize)
+		margin-bottom: 0
 
 
-.aboutWatercolor::before
+.aboutWatercolor__imgWrap
+	@media screen and (max-width: $xlSize)
+		position: absolute
+		top: 0
+	@media screen and (max-width: $lSize)
+		width: 100vw
+		overflow-x: hidden	
+	@media screen and (max-width: $mSize)	
+		position: static
+
+.aboutWatercolor__imgWrap::before
 	background-image: url("/img/aboutWatercolor.png")
 	background-repeat: no-repeat
-	background-position: -33px
+	background-position: -40px
 	display: block
 	height: 587px
 	width: 547px
 	content: ""
+	@media screen and (max-width: $lSize)
+		width: 980px
+		background-position: -330px
 	@media screen and (max-width: $mSize)
+		background-position: 0
+		width: 547px
+		margin-left: auto
+		margin-right: auto
 		flex-direction: column-reverse
 		transform: rotate(90deg) 
 
 .aboutWatercolor__title
 	margin-bottom: 36px
+	@media screen and (max-width: $sSize)
+		margin-bottom: 0
 
 .aboutWatercolor__textWrap 
 	width: 50%
 	margin-right: -25px
+	@media screen and (max-width: $xlSize)
+		width: 640px
+		margin-left: auto
+		margin-right: -40px
+	@media screen and (max-width: $lSize)
+		width: 640px
+		margin-left: auto
+		margin-right: 0	
 	@media screen and (max-width: $mSize)
+		margin-right: auto
+	@media screen and (max-width: $sSize)
 		width: 100%
 
 .aboutWatercolor__text
 	margin-left: 30px
 	max-width: 470px
+	@media screen and (max-width: $xsSize)
+		margin-left: 10px		
 
 .stereotypes
 	margin-bottom: 39px
 	position: relative
 	overflow-x: hidden
+	padding-top: 50px
 
 .stereotypes__title
 	display: block
@@ -145,11 +207,14 @@
 	position: absolute
 	left: -60px
 	top: -260px
+	z-index: -1
 	@media screen and (max-width: $lSize)
 		left: -130px
-	@media screen and (max-width: $mSize)
+	@media screen and (max-width: $sSize)
+		top: -150px
+		left: -170px
+	@media screen and (max-width: $xsSize)	
 		display: none	
-			
 
 .stereotypes__wrap::after
 	background-image: url("/img/flamingo.png")
@@ -163,6 +228,7 @@
 	position: absolute
 	right: -83px
 	top: -111px
+	z-index: -1
 	@media screen and (max-width: $lSize)
 		right: -130px
 	@media screen and (max-width: $mSize)
@@ -179,10 +245,12 @@
 .stereotypes__pargraph	
 	margin-bottom: 46px
 	max-width: 600px
+	@media screen and (max-width: $mSize)
+		max-width: 400px
 	@media screen and (max-width: $sSize)
 		margin-left: auto
 		margin-right: auto
-		width: 400px
+		width: 320px
 
 
 .stereotypes__text::after
@@ -206,6 +274,10 @@
 	// background-position: 9px 126px
 	background-position: center 126px
 	background-size: auto
+	@media screen and (max-width: $mSize)
+		background-image: none
+	@media screen and (max-width: $sSize)
+		margin-bottom: 160px	
 	
 
 .advantages__title
@@ -213,10 +285,13 @@
 
 .advantages__text
 	margin-bottom: 194px
+	@media screen and (max-width: $mSize)
+		margin-bottom: 100px	
 
 .advantages__wrap
 	max-width: 450px
 	margin-bottom: 158px
+	margin-left: 30px
 	@media screen and (max-width: $mSize)
 		margin-bottom: 100px	
 
@@ -227,17 +302,18 @@
 	margin-bottom: 135px
 	@media screen and (max-width: $mSize)
 		margin-right: auto 
-		margin-left: 0
+		margin-left: 30px	
+		margin-bottom: 100px	
 
 
 .teachers
 	background-image: url("/img/bgWatercolorSplash.png")
 	background-repeat: no-repeat
 	text-align: center
-	margin-bottom: 172px
+	margin-bottom: 183px
 
 .teachers__title
-	margin-bottom: 85px	
+	margin-bottom: 68px	
 
 .teachers__photoContainer
 	width: 770px
@@ -281,11 +357,16 @@
 
 
 .captureForm__text
-	@media screen and (max-width: $mSize)	
-		max-width: 360px
+		margin-bottom: 54px
+		@media screen and (max-width: $mSize)	
+			max-width: 360px
 
 .captureForm__title
 	margin-bottom: 20px
+	@media screen and (max-width: $xlSize)
+		margin-left: auto
+		margin-right: auto
+		max-width: 780px
 
 .captureForm__subTitle
 	margin-bottom: 30px
@@ -294,13 +375,9 @@
 		margin-right: auto
 		width: 80%
 
-.captureForm__text
-	margin-bottom: 60px
-
-
 .tariffs 
 	text-align: center
-	margin-bottom: 80px
+	margin-bottom: 95px
 	position: relative
 	overflow-x: hidden
 
@@ -322,6 +399,9 @@
 	display: flex
 	justify-content: center
 	margin-bottom: 43px
+	position: relative
+	overflow-x: hidden
+	min-height: 400px
 	@media screen and (max-width: $lSize)
 		flex-direction: column
 		margin-bottom: 0
@@ -334,6 +414,7 @@
 		text-align: center
 		flex-direction: column
 		align-items: center
+		margin-bottom: 30px
 	@media screen and (max-width: $xsSize)
 		text-align: left
 		align-items: flex-start
@@ -349,14 +430,18 @@
 		justify-content: center	
 
 .contacts__title
-	margin-bottom: 16px
+	margin-bottom: 10px
 
 .contacts__text
 	width: 45%
 	margin-bottom: 10px
+	@media screen and (max-width: $xsSize)
+		width: 70%
 
 .contacts__text--last
 	margin-bottom: 40px	
+	@media screen and (max-width: $xlSize)
+		margin-bottom: 20px	
 
 .contacts__link
 	z-index: 1
@@ -368,8 +453,10 @@
 
 .copyright__text
 	position: absolute
+	top: -60px
 	@media screen and (max-width: $xlSize)
 		width: 190px
+		top: -90px
 	@media screen and (max-width: $lSize)
 		width: 100%
 		top: 20px

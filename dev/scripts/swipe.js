@@ -10,7 +10,7 @@ let distanceSlider = 0;
 let distanceList = 0;
 let distanceCarouselPicture = 0;
 let distanceTarrifs = 0;
-let minDistance = 100;
+let minDistance = 50;
 let maxDistance = 0;
 let isSwipe = false;
 let tarriffsList = document.getElementById("tarriffsList");
@@ -26,7 +26,6 @@ tarriffsList.addEventListener("touchstart", swipeStart);
 tarriffsList.addEventListener("click", tarriffsListclick);
 
 function swipeStart (event) {
-	console.log("distanceCarouselPicture swipe start:" + distanceCarouselPicture);
 	evt = getEvent();	
 	evt.target.ondragstart = function() {
   		return false;
@@ -46,6 +45,7 @@ function setCurrentDistance () {
  	switch (thisList) {
  		case teacherSliderList:
  			distance = distanceList; 
+ 			maxDistance = getMaxDistance ();
  			break;
  		case teachersSlider: 			
  			distance = distanceSlider;
@@ -55,7 +55,6 @@ function setCurrentDistance () {
  			break;	
  		case tarriffsList: 			
  			distance = distanceTarrifs; 
- 			maxDistance = getMaxDistance ();
  			break;				
  		default:
  			distance = 0;		

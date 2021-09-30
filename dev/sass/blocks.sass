@@ -27,7 +27,11 @@
 	display: flex
 	justify-content: space-between
 	align-items: center
-	position: relative	
+	position: absolute
+	left: 0
+	right: 0
+	top: 0	
+
 
 .navigationList
 	transition-property: right
@@ -55,8 +59,13 @@
 	font-size: 96px
 	text-shadow: -1px 0 0
 	font-weight: lighter
+	line-height: auto
+	@media screen and (max-width: $lSize)
+		line-height: 80px
 	@media screen and (max-width: $sSize)
 		font-size: 80px
+
+
 
 .subTitle
 	font-family: GilroyBold, sans-serif
@@ -113,7 +122,7 @@
 	font-weight: lighter
 	color: $white
 	text-shadow: -1px 0 0
-	@media screen and (max-width: $xlSize)
+	@media screen and (max-width: $sSize)
 		font-size: $titleSmall
 		background-size: contain
 
@@ -125,6 +134,9 @@
 	height: 96px
 	padding-top: 15px
 	padding-left: 32px	
+	@media screen and (max-width: $xsSize)
+		padding-top: 10px		
+		padding-left: 10px
 
 .title--pink 
 	background-image: url("/img/bgTitlePink.png")
@@ -132,13 +144,20 @@
 	height: 164px
 	padding-top: 48px
 	padding-left: 12px
+	@media screen and (max-width: $sSize)
+		height: 100px
+		padding-top: 34px
+		padding-left: 0
 
 .title--orange
-	background-image: url("/img/bgTitleorange.png")
+	background-image: url("/img/bgTitleOrange.png")
 	height: 138px
 	padding-top: 40px
 	padding-left: 39px	
 	margin-left: -13px
+	@media screen and (max-width: $sSize)
+		height: 100px
+		padding-top: 30px
 
 .title--blue
 	background-image: url("/img/bgTitleBlue.png")
@@ -146,6 +165,9 @@
 	height: 99px
 	padding-top: 10px
 	padding-left: 0px
+	@media screen and (max-width: $sSize)
+		height: 70px
+		padding-top: 15px
 
 .title--darkPurple
 	background-image: url("/img/bgTitleDarkPurple.png")
@@ -153,13 +175,19 @@
 	height: 99px
 	padding-top: 25px
 	padding-left: 10px
+	@media screen and (max-width: $sSize)
+		height: 70px
+		padding-top: 20px
 
 .title--darkPing
 	background-image: url("/img/bgTitleDarkPink.png")
 	background-position: center
 	height: 99px
 	padding-top: 10px
-	padding-left: 10px	
+	padding-left: 10px
+	@media screen and (max-width: $sSize)
+		height: 70px
+		padding-top: 15px
 
 .stereotypesList
 	display: flex
@@ -217,7 +245,7 @@
 	grid-template-rows: 1fr
 	grid-template-columns: 1fr 1fr 1fr 1fr
 	@media screen and (max-width: $xlSize)
-		grid-template-rows: 1fr 1fr
+		grid-template-rows: 1.5fr 1fr
 		grid-template-columns: 1fr 1fr
 		justify-items: center
 	@media screen and (max-width: $sSize)	
@@ -227,12 +255,16 @@
 
 .advantagesList__item
 	width: 260px
-	// @media screen and (max-width: $xlSize)
-	// 	width: 50%
+	@media screen and (max-width: $sSize)
+		margin-bottom: 40px
 
-.advantagesList__item:nth-child(-n+2)
-	@media screen and (max-width: $xlSize)	
-		margin-bottom: 80px
+.advantagesList__item:last-child
+		@media screen and (max-width: $sSize)
+		margin-bottom: 0	
+
+// .advantagesList__item:nth-child(-n+2)
+// 	@media screen and (max-width: $xlSize)	
+// 	// 	margin-bottom: 80px
 
 
 .advantagesList__item::before
@@ -294,7 +326,7 @@
 	align-items: center
 	justify-content: space-between
 	position: absolute
-	top: -76px
+	top: -36px
 	bottom: 0
 	@media screen and (max-width: $lSize)
 		left: 0
@@ -600,10 +632,10 @@
 	transition: .25s ease-in-out
 
 .burgerMenu:hover span 
-	background-color: #E5B26F
+	background-color: $hover
 
 .burgerMenu:active span 
-	background-color: #AD7E40
+	background-color: $active
 
 .burgerMenu span:nth-child(1) 
 	top: 0px
@@ -645,7 +677,7 @@ iframe
 
 .popUp
 	transition-property: background-color
-	transition-duration: 1s
+	transition-duration: 0.5s
 	background-color: rgba(0, 0, 0, 0)
 	position: fixed
 	width: 100%

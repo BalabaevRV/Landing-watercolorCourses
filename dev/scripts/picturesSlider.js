@@ -19,7 +19,6 @@ function picturesArrowClick () {
 }
 
 function movePictureByArrow (moveDirection = "Right") {
-	console.log("distance click: " + distanceCarouselPicture);
 	if (moveDirection === "Right") {
 		distanceCarouselPicture = distanceCarouselPicture - widthPic;
 		if (Math.abs(distanceCarouselPicture)>maxOffsetWidthCarousel) {
