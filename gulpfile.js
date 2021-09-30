@@ -34,7 +34,7 @@ const copyFavicon = () => {
 
 
 const styles = () => {
-    return src ("dev/sass/*.sass")
+    return src (["dev/sass/fonts.sass", "dev/sass/reset.sass", "dev/sass/layout.sass","dev/sass/blocks.sass"])
         .pipe(plumber())
         .pipe(sourcemaps.init("."))
         .pipe(sass().on('error', sass.logError))
