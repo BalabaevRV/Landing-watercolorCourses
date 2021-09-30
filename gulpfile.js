@@ -71,7 +71,6 @@ const images = () => {
         .pipe(imagemin([
             imagemin.optipng({optimizationLevel: 3}),
             imagemin.mozjpeg({quality: 75, progressive: true}),
-            imagemin.svgo()
         ]))
         .pipe(dest("prod/img/"))
 }

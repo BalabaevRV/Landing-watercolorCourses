@@ -35,6 +35,7 @@ function burgerMenuClick () {
 }
 
 function closeMobileMenu () {
+	mainPage.style.overflow = "auto";
 	closeMenu = true;
 	burgerMenu.classList.toggle("openMenu");
 	mainNav.style.backgroundColor = "rgba(0, 0, 0, 0)";
@@ -42,6 +43,7 @@ function closeMobileMenu () {
 }
 
 function OpenMobileMenu() {
+	mainPage.style.overflow = "hidden";
 	burgerMenu.classList.toggle("openMenu");
 	toggleMenu ();
 	mainNav.style.backgroundColor = "rgba(0, 0, 0, 0.9)";

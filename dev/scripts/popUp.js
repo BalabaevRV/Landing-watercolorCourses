@@ -7,7 +7,7 @@ let closePopUpIcon = document.getElementById("closePopUpIcon");
 let closePopUpButton = document.getElementById("closePopUpButton");
 let buttonCapture = document.getElementById("buttonCapture");
 let linkPrivacyPolicy = document.getElementById("linkPrivacyPolicy");
-
+let mainPage = document.getElementById("mainPage");
 let close;
 
 teachersWork.addEventListener("click", openPopUp);
@@ -38,6 +38,7 @@ function popUpClick (event) {
 
 function openPopUp (event) {
 	event.preventDefault();
+	mainPage.style.overflow = "hidden";
 	close = false;
 	let textPopUp = getText(event.currentTarget);
 	popUp.querySelector(".popUp__paragraph").innerHTML = textPopUp;
@@ -49,6 +50,7 @@ function openPopUp (event) {
 }
 
 function closePopUp () {
+	mainPage.style.overflow = "auto";
 	popUp.style.backgroundColor = "rgba(0, 0, 0, 0)";
 	popUpWindow.style.right ="-200%";
 	close = true;
