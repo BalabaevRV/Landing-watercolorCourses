@@ -5,3 +5,4 @@ prod
 dev/css/*.css
 dev/css/*.map
 notes.txt
+prod
