@@ -27,6 +27,11 @@ const copyHTML = () => {
         .pipe(dest("prod/"))
 }
 
+const copyFavicon = () => {
+    return src ("dev/favicon.ico")
+        .pipe(dest("prod/"))
+}
+
 
 const styles = () => {
     return src ("dev/sass/*.sass")
@@ -74,5 +79,5 @@ const images = () => {
 exports.server = server;
 exports.styles = styles;
 exports.images = images;
-exports.prod = series(clean, styles, copyCSS, copyJS, copyHTML, images);
+exports.prod = series(clean, styles, copyCSS, copyJS, copyHTML, copyFavicon, images);
 exports.start = parallel (styles, server, watcher);

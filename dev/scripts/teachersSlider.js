@@ -22,7 +22,6 @@ function teacherSliderListClick (event) {
 }
 
 function getOffsetWidth (index) {
-	console.log(index);
 	if (index >= 0) {
 		return teachersSlider.offsetWidth * index; 
 	} else {
