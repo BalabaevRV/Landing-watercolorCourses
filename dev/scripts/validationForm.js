@@ -1,10 +1,10 @@
 "use strict";
 
-let formInputPhone = document.getElementById("formInputPhone");
-let spanMask = document.getElementById("spanMask");
+const formInputPhone = document.getElementById("formInputPhone");
+const spanMask = document.getElementById("spanMask");
 
-let phonePattern = "+ 7 (___) ___-__-__";  
-let regSample = /^\+{0,1}[\s-]{0,1}[78]{0,1}[\s-]{0,1}[(]{0,1}\d{3}[)]{0,1}[\s-]{0,1}\d{3}[\s-]{0,1}\d{2}[\s-]{0,1}\d{2}$/;
+const phonePattern = "+ 7 (___) ___-__-__";  
+const regSample = /^\+{0,1}[\s-]{0,1}[78]{0,1}[\s-]{0,1}[(]{0,1}\d{3}[)]{0,1}[\s-]{0,1}\d{3}[\s-]{0,1}\d{2}[\s-]{0,1}\d{2}$/;
 
 formInputPhone.addEventListener("blur", blurValidationPhone);
 formInputPhone.addEventListener("input", inputValidationPhone);
@@ -79,13 +79,12 @@ function keydownOnInputPhone (event) {
 	let numCurrentChar = formInputPhone.selectionStart;
 	let currentValue = formInputPhone.value;
 	let key = event.key;
+	event.preventDefault();
 	if (key >= "0" && key <= "9") {
 		if (numCurrentChar>18) {
-			event.preventDefault();
 			return;	
 		};
 		let nextElement;
-		event.preventDefault();
 		nextElement = currentValue.charAt(numCurrentChar);
 		while (nextElement != "_" && (isNaN(nextElement) || nextElement == " ")) {
 			nextElement = currentValue.charAt(++numCurrentChar);
@@ -97,7 +96,6 @@ function keydownOnInputPhone (event) {
 		setPositionInputPhone(formInputPhone, ++numCurrentChar);
 	};
 	if (event.key == "Backspace") {
-		event.preventDefault();
 		let currentChar;
 		do {
 			currentChar = currentValue.charAt(--numCurrentChar);
@@ -110,12 +108,10 @@ function keydownOnInputPhone (event) {
 		};
 
 	if (event.key == "ArrowLeft") {
-		event.preventDefault();
 		setPositionInputPhone(formInputPhone, --numCurrentChar);
 	};	
 
 	if (event.key == "ArrowRight") {
-		event.preventDefault();
 		setPositionInputPhone(formInputPhone, ++numCurrentChar);
 	};	
 }

@@ -13,12 +13,8 @@ let distanceTarrifs = 0;
 let minDistance = 50;
 let maxDistance = 0;
 let isSwipe = false;
-let tarriffsList = document.getElementById("tarriffsList");
+const tarriffsList = document.getElementById("tarriffsList");
 
-teacherSliderList.addEventListener("mousedown", swipeStart);
-teacherSliderList.addEventListener("touchstart", swipeStart);
-teachersSlider.addEventListener("mousedown", swipeStart);
-teachersSlider.addEventListener("touchstart", swipeStart);
 pictureCarousel.addEventListener("mousedown", swipeStart);
 pictureCarousel.addEventListener("touchstart", swipeStart);
 tarriffsList.addEventListener("mousedown", swipeStart);

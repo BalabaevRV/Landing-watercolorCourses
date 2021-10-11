@@ -1,13 +1,13 @@
 "use strict";
 
-let teachersWork = document.getElementById("teachersWork");
-let popUp = document.getElementById("popUp");
-let popUpWindow = document.getElementById("popUpWindow");
-let closePopUpIcon = document.getElementById("closePopUpIcon");
-let closePopUpButton = document.getElementById("closePopUpButton");
-let buttonCapture = document.getElementById("buttonCapture");
-let linkPrivacyPolicy = document.getElementById("linkPrivacyPolicy");
-let mainPage = document.getElementById("mainPage");
+const teachersWork = document.getElementById("teachersWork");
+const popUp = document.getElementById("popUp");
+const popUpWindow = document.getElementById("popUpWindow");
+const closePopUpIcon = document.getElementById("closePopUpIcon");
+const closePopUpButton = document.getElementById("closePopUpButton");
+const buttonCapture = document.getElementById("buttonCapture");
+const linkPrivacyPolicy = document.getElementById("linkPrivacyPolicy");
+const mainPage = document.getElementById("mainPage");
 let close;
 
 teachersWork.addEventListener("click", openPopUp);
@@ -54,7 +54,6 @@ function closePopUp () {
 	popUp.style.backgroundColor = "rgba(0, 0, 0, 0)";
 	popUpWindow.style.right ="-200%";
 	close = true;
-
 }
 
 function endClosePopUp () {

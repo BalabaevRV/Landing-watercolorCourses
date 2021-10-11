@@ -1,9 +1,9 @@
-let picturesLeftButton = document.getElementById("picturesLeftButton");
-let picturesRightButton = document.getElementById("picturesRightButton");
-let pictureCarousel = document.getElementById("pictureCarousel");
+const picturesLeftButton = document.getElementById("picturesLeftButton");
+const picturesRightButton = document.getElementById("picturesRightButton");
+const pictureCarousel = document.getElementById("pictureCarousel");
 let offsetWidthCarousel = 0;
-let widthPic = document.querySelector(".pictureCarousel__item").offsetWidth;
-let maxOffsetWidthCarousel = (pictureCarousel.offsetWidth-window.innerWidth)/2; 
+const widthPic = document.querySelector(".pictureCarousel__item").offsetWidth;
+const maxOffsetWidthCarousel = (pictureCarousel.offsetWidth-window.innerWidth)/2; 
 
 picturesLeftButton.addEventListener("click", picturesArrowClick);
 picturesRightButton.addEventListener("click", picturesArrowClick);

@@ -18,8 +18,17 @@ const copyCSS = () => {
 }
 
 const copyJS = () => {
-    return src ("dev/scripts/*.js")
+    return src ("dev/js/*.js")
         .pipe(dest("prod/script/"))
+}
+
+const scripts = () => {
+    return  src ("dev/scripts/*.js")
+        .pipe(sourcemaps.init("."))
+        .pipe(uglify()) 
+        .pipe(concat("app.js"))
+        .pipe(sourcemaps.write("."))
+        .pipe(dest("dev/js/"))
 }
 
 const copyHTML = () => {
@@ -56,6 +65,7 @@ const server = () => {
 
 const watcher = () => {
     watch("dev/sass/*.sass", series("styles"));
+    watch("dev/js/*.js", series("scripts"));
     watch("dev/*.html").on("change", browserSync.reload);
     watch("dev/scripts/*.js").on("change", browserSync.reload);
     watch("dev/css/*.css").on("change", browserSync.reload);
@@ -76,7 +86,8 @@ const images = () => {
 }
 
 exports.server = server;
+exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
-exports.prod = series(clean, styles, copyCSS, copyJS, copyHTML, copyFavicon, images);
-exports.start = parallel (styles, server, watcher);
+exports.prod = series(clean, styles, scripts, copyCSS, copyJS, copyHTML, copyFavicon, images);
+exports.start = parallel (styles, scripts, server, watcher);

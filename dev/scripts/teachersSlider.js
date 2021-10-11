@@ -1,14 +1,19 @@
 "use strict";
 
-let teachersLeftButton = document.getElementById("teachersLeftButton");
-let teachersRightButton = document.getElementById("teachersRightButton");
+const teachersLeftButton = document.getElementById("teachersLeftButton");
+const teachersRightButton = document.getElementById("teachersRightButton");
 let slideIndex = 0;
-let teacherSliderList = document.getElementById("teacherSliderList");
-let numSliders = teachersSlider.querySelectorAll("li").length-1;
+const teacherSliderList = document.getElementById("teacherSliderList");
+const numSliders = teachersSlider.querySelectorAll("li").length-1;
 
 teachersLeftButton.addEventListener("click", teachersArrowClick);
 teachersRightButton.addEventListener("click", teachersArrowClick);
 teacherSliderList.addEventListener("click", teacherSliderListClick);
+teacherSliderList.addEventListener("mousedown", swipeStart);
+teacherSliderList.addEventListener("touchstart", swipeStart);
+teachersSlider.addEventListener("mousedown", swipeStart);
+teachersSlider.addEventListener("touchstart", swipeStart);
+
 
 function teacherSliderListClick (event) {
 	let OffsetWidth;

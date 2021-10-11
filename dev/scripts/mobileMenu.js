@@ -1,12 +1,12 @@
 "use strict";
 
-let burgerMenu = document.getElementById("burgerMenu");
-let mainNav = document.getElementById("mainNav");
-let navigationList = document.getElementById("navigationList");
+const burgerMenu = document.getElementById("burgerMenu");
+const mainNav = document.getElementById("mainNav");
+const navigationList = document.getElementById("navigationList");
 
 
 burgerMenu.addEventListener ("click", burgerMenuClick);
-mainNav.addEventListener ("transitionend",endCloseMobile);
+mainNav.addEventListener ("transitionend", endCloseMobile);
 mainNav.addEventListener ("click", mainNavClick); 
 navigationList.addEventListener("click", navigationListClick);
 
@@ -25,8 +25,6 @@ function navigationListClick () {
 }
 
 function burgerMenuClick () {
-	// burgerMenu.classList.toggle("openMenu");
-
 	if (mainNav.classList.contains("mainNavigation__container--mobile")) {
 		closeMobileMenu();
 	} else {
