@@ -19,7 +19,7 @@ const copyCSS = () => {
 
 const copyJS = () => {
     return src ("dev/js/*.js")
-        .pipe(dest("prod/script/"))
+        .pipe(dest("prod/js/"))
 }
 
 const scripts = () => {
@@ -35,6 +35,12 @@ const copyHTML = () => {
     return src ("dev/*.html")
         .pipe(dest("prod/"))
 }
+
+const copyFonts = () => {
+    return src ("dev/fonts/*.*")
+        .pipe(dest("prod/fonts/"))
+}
+
 
 const copyFavicon = () => {
     return src ("dev/favicon.ico")
@@ -89,5 +95,5 @@ exports.server = server;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
-exports.prod = series(clean, styles, scripts, copyCSS, copyJS, copyHTML, copyFavicon, images);
+exports.prod = series(clean, styles, scripts, copyCSS, copyJS, copyHTML, copyFonts, copyFavicon, images);
 exports.start = parallel (styles, scripts, server, watcher);
